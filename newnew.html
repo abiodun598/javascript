@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- <h1 id="kenny">welcome to our store</h1>
+        <button onclick="store()">click</button> -->
+<br><br><br><br>
+
+        <form name="myform" onSubmit="return(valid())">
+            <label for="text">Name: </label>
+            <input type="text" name="name"><br><br>
+            <label for="text">age: </label>
+            <input type="text" name="numb"><br><br>
+            <label for="text">E-mail: </label>
+            <input type="text" name="mail"><br><br>
+            <label for="text">zip-code: </label>
+            <input type="text" name="code"><br><br>
+            <label for="text">select your country: </label>
+            <select name="country">
+                <option value="-1" selected>[choose]</option>
+                <option value="1">U.K</option>
+                <option value="2">NIGERIA</option>
+                <option value="3">ITALY</option>
+            </select><br><br>
+            <input type="submit">
+        </form>
+
+
+
+
+
+        
+        <script>
+            function valid(){
+                let mynumber=/^[0-9]+$/;
+                let mailformat=/^\w+@[a-z]+\.[a-z]{2,3}$/;
+                let name=document.myform.name.value;
+                let age=document.myform.numb.value;
+                let mail=document.myform.mail.value;
+                let zip=document.myform.code.value;
+                let country=document.myform.country.value;
+                if(name==''){
+                    alert('your name is needed')
+                    document.myform.name.focus();
+                    return false;
+
+                }
+                if(!age.match(mynumber)){
+                    alert('your age must be a digit')
+                    document.myform.numb.focus();
+                    return false;
+                }
+                if(!mail.match(mailformat)){
+                    alert('input a valid E-mail address')
+                    document.myform.mail.focus();
+                    return false;
+                }
+                if(zip.value.length!=5 || zip=='' || isNaN(zip)){
+                    alert('your zip code must be 5 digit')
+                    document.myform.code.focus();
+                    return false;
+                }
+                if(country.value=='-1'){
+                    alert('select your country')
+                    document.myform.country.focus();
+                    return false;
+                }
+                else{
+                    return true;
+                }
+
+            }
+
+
+
+            
+            // let prime = prompt('enter a prime number between 20-150');
+            // let n;
+            
+            // if(prime<20 || isNaN(prime) || !prime){
+            //     alert('please enter a valid input');
+            // }
+            // else if(prime>150){
+            //     alert(`${prime} is greater than 150`);
+            // }
+            
+            // else{
+            //     for( n=2; n<prime; n++){
+            //         if(prime%n==0){
+            //             alert(`${prime} is not a prime number`);
+            //             break;
+            //         }
+            //     }
+            //     if(n==prime){
+            //         alert(`${prime} is a prime number`);
+            //     }
+            // }
+
+            // let temp =['1','2','0','-2','3','4','5']
+            // let newar=temp.filter(e=>e>2)
+            // console.log(newar)
+            // let square= newar.map(d=>d*d)
+            // alert(square)
+
+
+
+            // x='kola is agood guy'
+            // console.log(x.indexOf('guy'))
+            // let name=['olu','john','idris','josh','kunle','david','femi',]
+            // console.log(name.slice(1,5))
+            // function store(){
+            //     let a= document.getElementById('kenny').innerHTML;
+
+            //     let b= a.replace('store','office') ;
+            //     document.getElementById('kenny').innerHTML=b;
+            // }
+            // let k='rokeeb';
+            // k.match('rok')
+            // console.log(k)
+        
+
+
+        </script>
+        
+    </body>
+</html>

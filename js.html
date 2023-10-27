@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <style>
+        #hotel {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    
+<br><br>
+
+
+    <select id="acm">
+        <option value="option1">public</option>
+        <option value="option2">hotel</option>
+    </select>
+    <select id="hotel" style="display: none;">
+        <option value="room1">room1</option>
+        <option value="room2">room2</option>
+        <option value="room3">room3</option>
+    </select>
+    <button type="button" class="btn btn-primary btn-lg" onclick="country()">
+        Nigeria age
+    </button>
+    <br><br>
+    <p>monday</p>
+    <p>tuesday</p>
+    <p>wednesday</p>
+    <p>thursday</p>
+    <p>friday</p>
+    <p>saturday</p>
+    <p>sunday</p>
+    
+
+
+
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+
+    <script>
+        const product={
+            id: '1',
+            name: 'Laptop',
+            price: '799.99',
+            category: 'Electronics',
+        };
+        let updated={
+            ...product,
+            category: 'Computers',
+            brand: 'Hp',
+            description: 'large',
+            color: 'black',
+        };
+        let {category,brand,description,color} = updated
+        document.querySelectorAll('h1')[0].innerHTML=`CATEGORY: ${category}`
+        document.querySelectorAll('h1')[1].innerHTML=`BRAND: ${brand}`
+        document.querySelectorAll('h1')[2].innerHTML=`DESCRIPTION: ${description}`
+        document.querySelectorAll('h1')[3].innerHTML=`COLOR: ${color}`
+
+
+
+
+        const employeeData = [
+            { id: 1, name: 'Alice', department: 'Engineering' },
+            { id: 2, name: 'Babalola', department: 'Sales' },
+            { id: 3, name: 'Charlie', department: 'Engineering' },
+            { id: 4, name: 'David', department: 'HR' },
+            { id: 5, name: 'Evelyn', department: 'Engineering' },
+
+            { id: 6, name: 'Ojo', department: 'Marketing' },
+
+            { id: 7, name: 'Abdulrasheed', department: 'Engineering' },
+
+            { id: 8, name: 'Korade', department: 'Marketing' },
+
+            { id: 9, name: 'Ngochukwu', department: 'HR' },
+
+            { id: 10, name: 'Tunji', department: 'Instructor' },
+
+            { id: 11, name: 'Ayeni', department: 'Engineering' },
+    
+        ];
+
+        let engi= employeeData.filter(({depart}) => department===Engineering);
+        let name= engi.map (({name})=>name);
+        console.log(employeeData.join(','))
+
+        // let temp =['1','2','0','-2','3','4','5']
+        //     let newar=temp.filter(e=>e>2)
+        //     console.log(newar)
+        //     let square= newar.map(d=>d*d)
+        //     alert(square)
+
+        // .filter(({depat}) => depart===math)
+        //     .map (({name})=>name);
+        //     mathdepwt.join(',')
+
+
+        // const arrey= [1,2,3,4];
+        // const [toyin,tosin,bolu,james]=o
+
+        // let myname=[1,2,3,4];
+        // let [kunle,bola,sodiq,dami] = myname
+        // console.log(kunle)
+        
+        // let pers={
+        //     name: 'rokeeb',
+        //     age: '22',
+        //     work: 'marketer',
+        // }
+        // let {name,age,work} = pers
+        // console.log(age)
+        // for( n=5; n<20; n++){
+        //     if(n%2==0){
+        //         continue;
+        //     }
+        //     document.write( `${n} <br>`)
+        // }
+        // let par=document.querySelectorAll('p')
+        // for(let i=0; i<par.length; i++){
+
+        //     console.log( `days of the week ${i} <br>: ${par[i].innerHTML}`)
+        // }
+
+        // let m=2;
+        // while(m<10){
+        //     document.write( `${m} <br>`);
+        //     m++;
+        // }
+
+        //let a= new Date().getDay();
+        //let b= ['sunday','monday','tuesday','wednesday','thursday','friday','saturday']
+
+        //for(let i=0; i<b.length; i++){
+        //    document.write(b[a])
+        //}
+
+
+
+
+
+
+
+        
+        // let retire= (yearofbirth)=>{
+        //     return new Date().getFullYear()-yearofbirth;
+        // }
+        // let name=prompt('what is your name')
+        // let val=prompt('how old are you')
+        // alert(`${name}, you have ${retire(val)} years until retirement`)
+
+        
+        // function rok(){
+        //     let x=Number(prompt('how old are you'))
+        //     let ifeage=x;
+        //     let rokeebage=x;
+        //     alert(ifeage+rokeebage)
+        // }
+        // let day= new Date().getDay();
+        // if(day==1){
+        //     rok();
+        // }
+
+
+
+        // function calage(birthyear){
+        //     return new Date().getFullYear()-birthyear;
+        // }
+        // let vaal=prompt('which year were you born')
+        // alert(calage(val))
+        
+
+
+        // function checkage(age){
+        //     if(age>=18){
+        //         return true
+        //     }
+        //     else{
+        //         return confirm('do you have your parent permission')
+        //     }
+        // }
+        // let qst=prompt('how old are you')
+        // if(checkage(qst)){
+        //     alert('access granted')
+        // }
+        // else{
+        //     alert('access denied')
+        // }
+
+
+
+        // function par(h,t){
+        //     return h+t
+        // }
+        // alert(par(5,4))
+
+
+
+        //     let naame= prompt('2+6 is ?')
+        // function vid(){
+        //     if(name==5){
+        //         alert('you are close')
+        //     }
+        //     else if(name==8){
+        //         alert('correct')
+        //     }
+        //     else{
+        //         alert('wrong')
+        //     }
+        // }
+        // vid();
+
+
+
+        // let old= prompt('how old are you');
+        // let ap=(old>=18)? 'apply': 'go back to school';
+        // alert(ap)
+                    
+
+    </script>
+</body>
+
+</html>

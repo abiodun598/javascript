@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .guesing{
+                width: 38%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0px auto;
+                border: 1px solid black;
+                border-radius: 5px;
+                font-family: sans-serif;
+            }
+            .guesing input{
+                width: 85%;
+                padding: 5px;
+            }
+            #btnagain{
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="guesing">
+            <h1>GUESS MY NUMBER GAME</h1>
+            <h2 id="start">start guessing...</h2>
+            <input id="input" type="text" placeholder="guess a number btw 1 and 20">
+            <h2 id="num">The number is ??</h2>
+            <button onclick='game()' id="btn">check</button>
+            <button onclick='again()' id="btnagain" style="display: none;">click to replay</button>
+            <h2>Highest Score: <span id="highest"></span></h2>
+        </div>
+
+
+
+
+
+        
+
+
+        </div><br>
+
+
+        <script>
+            let secretno= Math.trunc(Math.random() *20)+1;
+            
+            let num= document.getElementById('num');
+            let score= 20;
+            let btnagain= document.getElementById('btnagain');
+            
+            let highest= 0;
+
+
+            function scoreline(){
+                score=score-4
+                if(score===0){
+                    start.innerHTML='GAME IS OVER'
+                    start.style.color='black'
+                    num.style.color='black'
+                    num.innerHTML=`The number was ${secretno}`
+                    document.querySelector('.guesing').style.backgroundColor='red'
+                    document.getElementById('btn').style.display='none'
+                    document.getElementById('btnagain').style.display='inline-block'
+                    document.getElementById('btnagain').style.backgroundColor='red'
+                    document.getElementById('btnagain').style.color='white'
+                    input.value=`your score is ${score}`
+                    if(highest>score){
+                        document.getElementById('highest').innerHTML=`${score}`
+                    }
+                }
+            }
+            function game(){
+                let input= Number(document.getElementById('input').value);
+                let start= document.getElementById('start');
+                if(input<1 || isNaN(input) || !input || input>20){
+                    start.innerHTML='enter a valid number'
+                    start.style.color='red'
+                    
+                    scoreline()
+                }
+                
+                else if(input<secretno){
+                    start.innerHTML='too low'
+                    start.style.color='blue'
+                    scoreline()
+                }
+                else if(input>secretno){
+                    start.innerHTML='too high'
+                    start.style.color='green'
+                    scoreline()
+                }
+                else if(input==secretno){
+                    start.innerHTML=`yes, you are correct, the number is ${secretno}`
+                    start.style.color='white'
+                    document.querySelector('.guesing').style.backgroundColor='green'
+                    document.getElementById('btnagain').style.display='inline-block'
+                    document.getElementById('btnagain').style.backgroundColor='green'
+                    document.getElementById('btnagain').style.color='white'
+                    document.getElementById('btn').style.display='none'
+                    num.innerHTML=`your score is ${score}`
+                    btn.style.backgroundColor='green'
+
+                    if(highest>score){
+                        document.getElementById('highest').innerHTML=`${score}`
+                    }
+                }
+
+            }
+            console.log(secretno)
+
+            function again(){
+                secretno= Math.trunc(Math.random() *20)+1;
+                document.getElementById('btnagain').style.display='none'
+                document.getElementById('btn').style.display='inline-block'
+                document.getElementById('btn').style.backgroundColor='white'
+                start.innerHTML=`start guessing...`
+                start.style.color='black'
+                num.innerHTML=`The number is ??`
+                document.querySelector('.guesing').style.backgroundColor='white'
+                input.value=` `
+                console.log(secretno)
+            }
+        </script>
+    </body>
+</html>

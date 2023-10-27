@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>J.S: ASSIGNMENTS</title>
+        <link rel="icon" href="jsdown.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" 
+        crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" 
+        crossorigin="anonymous"></script>
+        <style>
+            #gener{
+                width: 95%;
+                margin: 0px auto;
+            }
+            #list{
+                height: 100%;
+                position: sticky;
+                top: 5px;
+            }
+            #list-example{
+                height: 450px;
+                width: 100%;
+                overflow-y: scroll;
+                overflow-x: hidden;
+            }
+            #list-example a{
+                border: 10px groove gold;
+                color: rgb(1, 1, 99);
+                
+                font-size: medium;
+                font-weight: bolder;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            #items{
+                background-color: rgb(1, 1, 99);
+                color: white;
+                box-shadow: 0px 0px 15px 3px white;
+            }
+            #items h3{
+                color: gold;
+            }
+            .no3 li{
+                line-height: 40px;
+            }
+            .ass{
+                font-weight: bolder;
+                letter-spacing: 3px;
+                color: red;
+                padding: 10px;
+                text-align: center;
+                margin: 0px auto;
+                text-shadow: 0px 0px 3px gold;
+                box-shadow: inset 0px 0px 10px 4px gold;
+            }
+            .hede{
+                font-size: 28px;
+                font-weight: bolder;
+            }
+            td{
+                border: 4px solid gold !important;
+                box-shadow: inset 0px 0px 5px 2px green !important;
+                background: rgb(1, 1, 99) !important;
+                color: white !important;
+            }
+            .gre:hover{
+                background: rgba(255, 94, 0, 0.925);
+                box-shadow: 0px 0px 12px 2px white;
+            }
+            .gre{
+                transition: all 0.5s ease-in-out 0s;
+                border: none;
+                outline: none;
+                padding: 14px;
+                font-size: 20px;
+                border-radius: 10px;
+                font-weight: bolder;
+                background-color: limegreen;
+            }
+            #contentdiv>div{
+                margin-left: 20px;
+            }
+            .forniger{
+                background-color: white;
+                width: 60%;
+                padding: 24px 22px;
+                border-radius: 17px;
+                border: 4px solid gold;
+                box-shadow: inset 0px 0px 5px 2px green;
+                color: black;
+                font-weight: bolder;
+            }
+            .forniger h4{
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            #first{
+                font-weight: bolder;
+                width: 60%;
+                font-size: 22px;
+                padding: 4px;
+                border: 2px solid black;
+                border-radius: 5px;
+            }
+            #nigbu{
+                font-weight: bolder;
+                width: 60%;
+                border: none;
+                outline: none;
+                padding: 4px;
+
+                font-size: 22px;
+                border-radius: 5px;
+                background-color: rgb(172, 172, 172);
+            }
+            #nigbu:hover{
+                background: aqua;
+            }
+            .calc{
+                background-color: white;
+                width: 55%;
+                padding: 22px;
+                border-radius: 17px;
+                border: 4px solid gold;
+                box-shadow: inset 0px 0px 5px 2px green;
+                color: black;
+                font-weight: bolder;
+            }
+            .calc input{
+                font-weight: bolder;
+                width: 100%;
+                padding: 4px;
+                font-size: 22px;
+                border: 2px solid black;
+                border-radius: 5px;
+                margin-top: 3px;
+            }
+            .calc h2{
+                width: 35px;
+                height: 35px;
+                margin: 3px;
+                margin-left: 44%;
+            }
+            .calc h3{
+                margin: 3px;
+                margin-top: 6px;
+                font-weight: 800;
+                color: rgb(0, 0, 107) !important;
+            }
+            .calc>div{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 80%;
+                margin: 0% auto;
+            }
+            .calc button{
+                border: 1px solid black;
+                outline: none;
+                padding: 0px 16px;
+                background-color: blue;
+                font-size: xx-large;
+                border-radius: 8px;
+                color: white;
+            }
+
+
+
+
+            .inv{
+                background-color: white;
+                width: 58%;
+                padding: 14px 20px;
+                padding-top: 28px;
+                border-radius: 17px;
+                border: 4px solid gold;
+                box-shadow: inset 0px 0px 5px 2px green;
+                color: black;
+                font-weight: bolder;
+            }
+            .inv select{
+                width: 100%;
+                padding: 5px;
+                font-size: 22px;
+                border: 2px solid black;
+                border-radius: 5px;
+                margin-top: 3px;
+            }
+            #amount{
+                font-weight: bolder;
+                width: 100%;
+                padding: 5px;
+                font-size: 22px;
+                border: 2px solid black;
+                border-radius: 5px;
+                margin-top: 3px;
+            }
+            .inv h3{
+                margin: 3px;
+                margin-top: 6px;
+                font-weight: 800;
+                color: rgb(0, 0, 107) !important;
+            }
+            .inv label{
+                font-weight: bold;
+                font-size: 13px;
+            }
+            .forr{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 97%;
+                margin: 0% auto;
+            }
+            #cal:hover{
+                background: rgba(128, 0, 145, 0.925);
+                box-shadow: 0px 0px 10px 2px white;
+                color: white;
+            }
+            #cal{
+                transition: all 0.5s ease-in-out 0s;
+                border: 2px solid black;
+                outline: none;
+                background-color: white;
+                font-size: x-large;
+                border-radius: 8px;
+                color: black;
+                margin-left: 30%;
+                margin-bottom: 20px;
+            }
+            #result{
+                font-size: 21px;
+            }
+            .hot select{
+                width: 90px;
+                padding: 4px;
+                font-size: 22px;
+                border: 1px solid black;
+                margin-top: 3px;
+            }
+            .loav{
+                background-color: white;
+                width: 60%;
+                padding: 14px 20px;
+                padding-top: 28px;
+                border-radius: 17px;
+                border: 4px solid gold;
+                box-shadow: inset 0px 0px 5px 2px green;
+                color: black;
+                font-weight: bolder;
+            }
+            #reslt{
+                font-weight: 800;
+                color: rgb(0, 0, 107) !important;
+            }
+            .loav label{
+                font-size: 13px;
+                font-weight: bold;
+            }
+            .loav input{
+                font-size: 22px;
+                padding: 4px;
+                font-weight: bolder;
+                width: 80%;
+                font-size: 22px;
+                border: 2px solid black;
+                border-radius: 5px;
+                margin-top: 3px;
+                margin-bottom: 8px;
+            }
+            .raft{
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 8px;
+            }
+            .raft>div{
+                margin-right: 10%;
+            }
+            .raft select{
+                font-size: 20px;
+                padding: 2px;
+                font-weight: bold;
+                font-size: 22px;
+                border: 2px solid black;
+                border-radius: 5px;
+                margin-top: 3px;
+            }
+            .loav button{
+                font-size: 20px;
+                font-weight: bold;
+                width: fit-content;
+                height: fit-content;
+                font-size: 22px;
+                border: 2px solid black;
+                border-radius: 5px;
+                margin-top: 3px;
+            }
+            .guesing{
+                width: 70%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 17px;
+                font-family: sans-serif;
+                background-color: white;
+                border: 4px solid gold;
+                box-shadow: inset 0px 0px 5px 2px green;
+                padding: 25px;
+                color: black;
+            }
+            .guesing input{
+                width: 85%;
+                padding: 4px;
+                font-weight: bolder;
+                font-size: 22px;
+                border: 2px solid black;
+                border-radius: 5px;
+            }
+            .guesing h1{
+                font-size: 25px;
+                font-weight: bolder;
+            }
+            .guesing h2{
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 60px;
+            }
+            #btnagain{
+                color: white;
+            }
+            
+        </style>
+    </head>
+    <body style="background-color: black;"><br>
+        <h1 class="ass">ASSIGNMENTS</h1><br><br>
+        <div class="row" id="gener">
+            
+            <div class="col-4" id="list">
+                <div id="list-example" class="list-group">
+                    <a class="list-group-item list-group-item-action" href="#list-item-0">GREETING</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-1">HISTORY OF JAVASCRIPT</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-2">JAVA AND JAVASCRIPT</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-3">LET,CONST AND VAR</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-4">ABOUT MYSELF</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-5">LOGICAL AND COMPARISON OPERATORS</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-6">NIGERIA AGE</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-7">SIMPLE CALCULATOR</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-8">INVESTMENT CALCULATOR</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-9">10 RESERVED KEYWORDS</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-10">LOAN CALCULATOR</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-11">MY NUMBER GAME</a>
+                    
+                </div>
+            </div>
+            <div class="col-8" id="items">
+                
+                <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0" id="contentdiv"><br>
+                    <h3 id="list-item-0">GREETING</h3><br>
+                    <div>
+                        <button onclick="greet()" class="gre">
+                            click to greet you
+                        </button>
+                    </div><br><br><br>
+                    <h3 id="list-item-1">HISTORY OF JAVASCRIPT</h3><br>
+                    <div>
+                        <ul>
+                            <li>JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997.</li>
+                            <li>JavaScript has some items such as variables, functions, and basic control flow statements.</li>
+                            <li>ECMAScript is the official name of the language.</li>
+                            <li>ECMAScript versions have been abbreviated to ES1, ES2, ES3, ES5, and ES6.</li>
+                            <li>ECMAScript 1, also known as ES1, was the first version of the ECMAScript <br>
+                                standard and was released in 1997. It was based on the JavaScript <br>
+                                language and included feat</li>
+                            <li>1996 Netscape 2 was released with JavaScript 1.</li>
+                            <li>1997 JavaScript became an ECMA standard (ECMA-262)</li>
+                            <li>1997 ES1 ECMAScript 1 was released</li>
+                            <li>1997 ES1 IE 4 was the first browser to support ES1</li>
+                            <li>1998 ES2 ECMAScript 2 was released</li>
+                            <li>1998 Netscape 42 was released with JavaScript 1.3</li>
+                            <li>1999 ES2 IE 5 was the first browser to support ES2</li>
+                            <li>1999 ES3 ECMAScript 3 was released</li>
+                            <li>2000 ES3 IE 5.5 was the first browser to support ES3</li>
+                            <li>2000 Netscape 62 was released with JavaScript 1.5</li>
+                            <li>2000 Firefox 1 was released with JavaScript 1.5</li>
+                            <li>2008 ES4 ECMAScript 4 was abandoned</li>
+                            <li>2009 ES5 ECMAScript 5 was released</li>
+                            <li>2011 ES5 IE 9 was the first browser to support ES5 *</li>
+                            <li>2011 ES5 Firefox 4 was released with JavaScript 1.8.5</li>
+                            <li>2012 ES5 Full support for ES5 in Safari 6</li>
+                            <li>2012 ES5 Full support for ES5 in IE 10</li>
+                            <li>2012 ES5 Full support for ES5 in Chrome 23</li>
+                            <li>2013 ES5 Full support for ES5 in Firefox 21</li>
+                            <li>2013 ES5 Full support for ES5 in Opera 15</li>
+                            <li>2014 ES5 Full support for ES5 in all browsers</li>
+                            <li>2015 ES6 ECMAScript 6 was released</li>
+                            <li>2016 ES6 Full support for ES6 in Chrome 51</li>
+                            <li>2016 ES6 Full support for ES6 in Opera 38</li>
+                            <li>2016 ES6 Full support for ES6 in Safari 10</li>
+                            <li>2017 ES6 Full support for ES6 in Firefox 54</li>
+                            <li>2017 ES6 Full support for ES6 in Edge 15</li>
+                            <li>2018 ES6 Full support for ES6 in all browsers **</li>
+                        </ul>
+                    </div><br><br><br>
+
+
+                    <h3 id="list-item-2">DIFFERENCE BETWEEN JAVA AND JAVASCRIPT.</h3><br>
+                    <div>
+
+
+
+                        <table class="table table-bordered">
+                            <tr>
+                                <td class="hede">s/n</td>
+                                <td class="hede">JAVA SCRIPT</td>
+                                <td class="hede">JAVA </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td> JavaScript is an OOP(object-oriented program).</td>
+                                <td> Java is an object-based programming language.</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>JavaScript is a scripting language.</td>
+                                <td>Java is a Programming language.</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>JavaScript code is run on a browser only.</td>
+                                <td>Java creates applications that run in a virtual machine or browser</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>JavaScript code are all in text.</td>
+                                <td>Java code needs to be compiled</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>JavaScript is more commonly used in web applications like browsers</td>
+                                <td>Java is more widely used in app development, smart devices and back-end applications.</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Java does not require that amount of memory.</td>
+                                <td>Javascript requires a large amount of memory.</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>JavaScript needs to be integrated into the HTML program for the execution.</td>
+                                <td>Java program should be compiled before execution.</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>In JavaScript, user is not able to perform complicated tasks.</td>
+                                <td>In Java, by utilizing the Multi-threading, users can perform complicated tasks.</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>JavaScript programming language was developed by the "Netscape."</td>
+                                <td>Java programming language was developed by the "Sun Microsystems."</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>JavaScript is stored on the Host machine (client Machine) as the "source" text.</td>
+                                <td>Java is stored on the host machine as the "Byte" code.</td>
+                            </tr>
+                        </table>
+
+
+
+
+
+
+
+
+                           
+                    </div><br><br><br>
+                    <h3 id="list-item-3">DIFFERENCE BETWEEN LET,CONST AND VAR.</h3><br>
+                    <div>
+                        <ul class="no3">
+                            <li>Const must be initialized during declaration, while var and let can be declared without being initialized.</li>
+                            <li>var declarations are globally scoped or function scoped while let and const are block scoped.</li>
+                            <li>They are all hoisted to the top of their scope, but var variables are initialized with undefined, and let and const variables are not initialized.</li>
+                            <li>var variables can be updated and re-declared within its scope, let variables can be updated but not re-declared <br>
+                                and const variables can neither be updated nor re-declared.
+                        </ul>
+                    </div><br><br><br>
+                    <h3 id="list-item-4">FOR ME.</h3><br>
+                    <div>
+                        <button type="button" class="btn btn-primary btn-lg" onclick="james()">
+                            check on my details
+                        </button>
+                    </div>
+                    <br><br><br><br><br>
+                    <h3 id="list-item-5">DIFFERENCE BETWEEN LOGICAL AND COMPARISON OPERATORS.</h3><br>
+                    <div>
+                        <table class="table table-bordered">
+                            <tr>
+                                <td class="hede">s/n</td>
+                                <td class="hede">LOGICAL</td>
+                                <td class="hede">COMPARISON </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td> logical operator's operands are booleans.</td>
+                                <td>  comparison operators may have operands of any type.</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>logical operators perform logical operations on boolean types only.</td>
+                                <td>Comparison operators are used to compare two values</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>negating a comparison involves a logical operation (negation) in addition to the comparison operation.</td>
+                                <td>a single comparison operation that immediately yields the desired result is typically more concise/readable and may be easier for the computer to optimise..</td>
+                            </tr>
+                        </table><br>
+                        <div>
+                            <button type="button" class="btn btn-primary btn-lg" onclick="ope()">
+                                click for one example
+                            </button>
+                        </div>
+                        
+                    </div><br><br><br>
+                    
+                    <h3 id="list-item-6">NIGERIA AGE</h3><br>
+                    <div class="forniger">
+                        <h4>GUESS NIGERIA AGE</h4>
+                        <label for="text">Input Nigeria age</label><br>
+                        <input type="text" id="first"><br><br>
+                        <button onclick='kama()' id="nigbu"> 
+                            CHECK
+                        </button>
+                    </div><br><br><br>
+                    
+
+                    <h3 id="list-item-7">SIMPLE CALCULATOR</h3><br>
+                    <div class="calc">
+                        <input type="text" id="int1"><br>
+                        <h2 id="sign"></h2>
+                        <input type="text" id="int2"><br>
+                        <h4 id="answer"></h4><br>
+                        <div>
+                            <button class="butn" value="plu">+</button>
+                            <button class="butn" value="subt">-</button>
+                            <button class="butn" value="mult">x</button>
+                            <button class="butn" value="divi">/</button>
+                        </div>
+                    </div><br><br><br>
+
+                    <h3 id="list-item-8">INVESTMENT CALCULATOR</h3><br>
+                    <div class="inv">
+                        <div class="forr">
+                            <div style="width: 60%;">
+                                <label for="number">Input the amount you like to invest</label><br>
+                                <input type="number" id="amount">
+                            </div>
+                            <div style="width: 36%;">
+                            <label for="number">select duration</label><br>
+                                <select id="duration">
+                                    <option value="1">1 MONTH</option>
+                                    <option value="2">2 MONTH</option>
+                                    <option value="3">3 MONTH</option>
+                                    <option value="4">4 MONTH</option>
+                                    <option value="5">5 MONTH</option>
+                                    <option value="6">6 MONTH</option>
+                                    <option value="7">7 MONTH</option>
+                                    <option value="8">8 MONTH</option>
+                                    <option value="9">9 MONTH</option>
+                                    <option value="10">10 MONTH</option>
+                                    <option value="11">11 MONTH</option>
+                                    <option value="12">12 MONTH</option>
+                                </select>
+                            </div>
+                        </div>
+                        <p>Note: Increase rate is 15%.</p>
+                        <button id="cal">
+                            CALCULATE
+                        </button>
+                        <h3 id="result"></h3>
+                    </div><br><br><br>
+
+
+
+
+                    <h3 id="list-item-9">10 RESERVED KEYWORDS IN JAVASCRIPT AND THERE USAGE</h3><br>
+                    
+                    <div>
+                        <p> JavaScript has several reserved keywords that have special meanings within the language.
+                            Here are 10 commonly used reserved keywords in JavaScript and a brief description of what they do:
+                        </p>
+
+                        <table class="table table-bordered">
+                            <tr>
+                                <td class="hede">s/n</td>
+                                <td class="hede">KEYWORDS</td>
+                                <td class="hede">USAGE </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>LET</td>
+                                <td>It is used to declare block-scoped variables. It allows for better scoping control than 'var'.</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>VAR</td>
+                                <td>Used to declare variables in JavaScript.Variable declared with 'var' are function-scoped</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>CONST</td>
+                                <td>It is also introduced in ES6,'const' is used to declare constants. variables declared with 'const' cannot be reassigned after they are initialized.</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>FUNCTION</td>
+                                <td>It is used to declare a function. Functions are blocks of reusable code that can be invoked with or without parameter</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>IF</td>
+                                <td>It is used to conditionally execute code based on a specified condition. It's part of control flow statements.</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>ELSE</td>
+                                <td>It is used in conjuction with 'if' to specify code that should execute when the condition in the 'if' statement is false.
+                                    </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>FOR</td>
+                                <td>It is used to create loops. The 'for' statement includes initialization, condition, and iteration expressions to control the loop's behaviour.</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>WHILE</td>
+                                <td>Another loop statement used to repeatedly exeute a block of code as long as a specified condition is true.</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>BOOLEAN</td>
+                                <td>It is used as a function to get the value of a variable, object, conditions, expressions, etc. in terms of true or false.</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>BREAK</td>
+                                <td>It breaks the loop and continues executing the code after the loop.</td>
+                            </tr>
+                        </table>
+
+                    </div><br><br><br>
+
+                    <h3 id="list-item-10">LOAN CALCULATOR</h3><br>
+                    <div class="loav">
+                        <label for="number">Input the amount you like to borrow</label><br>
+                        <input type="number" id="borrow">
+                        <div class="raft">
+                            <div>
+                                <label for="number">select duration</label><br>
+                                <select id="time">
+                                    <option value="1">1 MONTH</option>
+                                    <option value="2">2 MONTH</option>
+                                    <option value="3">3 MONTH</option>
+                                    <option value="4">4 MONTH</option>
+                                    <option value="5">5 MONTH</option>
+                                    <option value="6">6 MONTH</option>
+                                    <option value="7">7 MONTH</option>
+                                    <option value="8">8 MONTH</option>
+                                    <option value="9">9 MONTH</option>
+                                    <option value="10">10 MONTH</option>
+                                    <option value="11">11 MONTH</option>
+                                    <option value="12">12 MONTH</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label>select your choice for interest rate </label><br>
+                                <select id="intrestper">
+                                    <option value="0.05">5%</option>
+                                    <option value="0.1">10%</option>
+                                    <option value="0.15">15%</option>
+                                    <option value="0.2">20%</option>
+                                    <option value="0.25">25% </option>
+                                    <option value="0.3">30% </option>
+                                    <option value="0.35">35% </option>
+                                    <option value="0.4">40% </option>
+                                    <option value="0.45">45% </option>
+                                    <option value="0.5">50% </option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="clone" style="margin: 15px 0px;">
+                            Calculate repayment
+                        </button>
+                        <h3 id="reslt"></h3>
+                    </div><br><br><br>
+
+                    <h3 id="list-item-11">MY NUMBER GAME</h3><br>
+                    <div class="guesing">
+                        <h1>GUESS MY NUMBER GAME</h1>
+                        <h2 id="start">start guessing...</h2>
+                        <input id="input" type="text" placeholder="guess a number btw 1 to 20">
+                        <h2 id="num">The number is ??</h2>
+                        <button onclick='game()' id="btn">check</button>
+                        <button onclick='again()' id="btnagain" style="display: none;">click to replay</button>
+                        <h2>Highest Score: <span id="highest"></span></h2>
+                    </div><br>
+                    <div class="hot">
+                        <select id="acm">
+                            <option value="option1">public</option>
+                            <option value="option2">hotel</option>
+                        </select>
+                        <select id="hotel" style="display: none;">
+                            <option value="room1">room1</option>
+                            <option value="room2">room2</option>
+                        </select>
+                    </div><br><br><br>
+                    
+                </div>
+            </div>
+        </div><br><br><br><br>
+        
+
+
+        
+        <script>
+            
+
+            let a= new Date().getDay();
+            let b= ['sunday, go to church and have a rest','monday, go to work','tuesday, go to work','wednesday, have an exercise and go to work','thursday, clean your environment','friday, go to JUMAH','saturday, let go to party']
+            alert(`Today is ${b[a]}`)
+
+
+
+                let prayer= new Date().getHours();
+                switch(prayer){
+                    case 6:
+                        alert('stand up from bed, go to Mosque and observe your SUBUHI')
+                        break;
+                    case 14:
+                        alert('ZUHR has come in')
+                        break;
+                    case 16:
+                        alert('go to mosgue for ASHRI')
+                        break;
+                    case 19:
+                    alert('go to mosgue for MOGRIB')
+                    break;
+                    case 20:
+                        alert('remember you need to observe ISHAI before going to bed')
+                        break;
+                }
+
+
+            function james(){
+                const me={
+                    name:'Ali Rokeeb',
+                    age:'17',
+                    complextion:'chocolate',
+                    town:'ogbomosho',
+                    location:'idi-ose',
+                    food:'bread and beans',
+                    skill:'playing football',
+                }
+                alert(`my name is ${me.name}, i'm ${me.age} years old, i'm ${me.complextion} in complextion, i'm from ${me.town}, my best food is ${me.food}, i love ${me.skill}.`)
+            }
+            function ope(){
+                let log=18
+                let logi=prompt('input your age to apply')
+                if(log>logi){
+                    alert('you are under age')
+                }
+                else if(logi>=18 && logi<=50){
+                    alert('you can get in')
+                }
+                else if(logi>50){
+                    alert('you are too old, go and rest')
+                }
+                if(isNaN(logi)){
+                    alert('please enter your age not alphabet')
+                }
+                else if(!logi){
+                    alert('go back and input your age')
+                }
+                
+            }
+            
+            function greet(){
+                let gr= new Date().getHours();
+                if(gr>0 && gr<12){
+                    alert('Good morning')
+                }
+                else if(gr>=12 && gr<15){
+                    alert('Good afternoon')
+                }
+                else if(gr>=15 && gr<=23){
+                    alert('Good evening')
+                }
+            }
+
+
+            /*
+            function country(){
+                
+                let country= Number(prompt('HOW OLD IS NIGERIA'))
+                switch(country){
+                    case isNaN(country):
+                        alert('please enter a valid input')
+                        break;
+                    case !(country):
+                        alert('go back and answer the question')
+                        break;
+                    case 63:
+                        alert('correct, more power to your elbow')
+                        break;
+                    default:
+                    alert('you are wrong')
+                }
+            }*/
+
+            function kama(){
+                let input1= document.getElementById('first').value
+                let year= new Date().getFullYear()-1960
+                if(isNaN(input1)){
+                    alert('please enter a number not alphabet')
+                }
+                else if(!input1){
+                    alert('go back and answer the question')
+                }
+                else if(input1==year){
+                    alert('correct, more power to your elbow')
+                }
+                
+                else if(input1==year+1 || input1==year+2 || input1==year+3 || input1==year+4 || input1==year+5){
+                    alert('too high, you need to come down a bit')
+                }
+                else if(input1==year-1 || input1==year-2 || input1==year-3 || input1==year-4){
+                    alert('a bit low')
+                }
+                else{
+                    alert('you are wrong');
+                }
+
+            }
+
+
+            function calage(birthyear){
+               return new Date().getFullYear()-birthyear;
+            }
+            let val=prompt('which year were you born')
+            if(!val || isNaN(val)){
+                alert('you need to input your age')
+            }
+            else{
+                alert(`You are ${calage(val)} years old`)
+            }
+                
+
+
+            let butn= document.querySelectorAll('.butn');
+                for (let r=0; r<butn.length; r++) {
+                    butn[r].addEventListener('click', ()=> {
+                        let int1= Number(document.getElementById('int1').value);
+                        let int2= Number(document.getElementById('int2').value);
+                        let sign=document.getElementById('sign');
+                        let answer=document.getElementById('answer');
+
+                        
+                        if(butn[r].value=='plu'){
+                            answer.innerHTML=`= ${int1+int2}`;
+                            sign.innerHTML='+';
+                            answer.style.color='green';
+                        }
+                        else if(butn[r].value=='subt'){
+                            answer.innerHTML=`= ${int1-int2}`;
+                            sign.innerHTML='-';
+                            answer.style.color='green';
+                        }
+                        else if(butn[r].value=='mult'){
+                            answer.innerHTML=`= ${int1*int2}`;
+                            sign.innerHTML='x';
+                            answer.style.color='green';
+                        }
+                        else if(butn[r].value=='divi'){
+                            answer.innerHTML=`= ${int1 / int2}`;
+                            sign.innerHTML='/';
+                            answer.style.color='green';
+                        }
+                        if (int1== "" && int2== "") {
+                            answer.innerHTML = 'insert a number to calculate'
+                            answer.style.color = 'red'
+                            sign.style.visibility = 'hidden'
+                        }
+                        else if (isNaN(int1) && isNaN(int2)) {
+                            answer.innerHTML = 'insert a number to calculate'
+                            answer.style.color = 'red'
+                            sign.style.visibility = 'hidden'
+                        }
+                    }
+                )};
+
+
+            document.getElementById('cal').addEventListener("click", 
+            function(){
+                let investment= document.getElementById('amount').value;
+                let duration= document.getElementById('duration').value;
+                let gain= 0.15*investment;
+                let withdrawl= Number(gain * duration)+Number(investment);
+                document.getElementById('result').innerHTML=`You will withdraw ${withdrawl} naira at the end of ${duration}
+                month(s). When you invest ${investment} naira with us.`
+                
+            })
+            
+            document.querySelector('.clone').addEventListener("click", 
+            function(){
+                let borrow= Number(document.getElementById('borrow').value);
+                let time= Number(document.getElementById('time').value);
+                let intrestper= document.getElementById('intrestper').value;
+                let intrestrate= intrestper*borrow;
+                let repay= Number((intrestrate)/time) + Number(borrow);
+                document.getElementById('reslt').innerHTML=`Your monthly repayment is ${repay} naira
+                , if you borrow ${borrow} amount at  ${intrestper} interest`
+                
+            })
+
+
+            acm.addEventListener("change", () => {
+                let acm = document.querySelector('#acm');
+                let hotel = document.querySelector('#hotel');
+                if (acm.value === 'option2') {
+                    hotel.style.display = "inline-block"
+                }
+                else {
+                    hotel.style.display = "none"
+                }
+            }
+
+            )
+
+
+            let secretno= Math.trunc(Math.random() *20)+1;
+            
+            let num= document.getElementById('num');
+            let score= 20;
+            let btnagain= document.getElementById('btnagain');
+            
+            let highest= 0;
+
+            function scoreline(){
+                score=score-4
+                if(score===0){
+                    start.innerHTML='GAME IS OVER'
+                    start.style.color='black'
+                    num.style.color='black'
+                    num.innerHTML=`The number was ${secretno}`
+                    document.querySelector('.guesing').style.backgroundColor='red'
+                    document.getElementById('btn').style.display='none'
+                    document.getElementById('btnagain').style.display='inline-block'
+                    document.getElementById('btnagain').style.backgroundColor='red'
+                    document.getElementById('btnagain').style.color='white'
+                    input.value=`your score is ${score}`
+                    highest= 0;
+                    if(highest==score){
+                        document.getElementById('highest').innerHTML=`${score}`
+                    }
+                }
+            }
+            function game(){
+                let input= Number(document.getElementById('input').value);
+                let start= document.getElementById('start');
+                if(input<1 || isNaN(input) || !input || input>20){
+                    start.innerHTML='enter a valid number'
+                    start.style.color='red'
+                    
+                    scoreline()
+                }
+                
+                else if(input<secretno){
+                    start.innerHTML='too low'
+                    start.style.color='blue'
+                    scoreline()
+                }
+                else if(input>secretno){
+                    start.innerHTML='too high'
+                    start.style.color='green'
+                    scoreline()
+                }
+                else if(input==secretno){
+                    start.innerHTML=`yes, you are correct, the number is ${secretno}`
+                    start.style.color='white'
+                    document.querySelector('.guesing').style.backgroundColor='green'
+                    document.getElementById('btnagain').style.display='inline-block'
+                    document.getElementById('btnagain').style.backgroundColor='green'
+                    document.getElementById('btnagain').style.color='white'
+                    document.getElementById('btn').style.display='none'
+                    num.innerHTML=`your score is ${score}`
+                    btn.style.backgroundColor='green'
+
+                    if(score>highest){
+                        document.getElementById('highest').innerHTML=`${score}`
+                    }
+                }
+
+            }
+            function again(){
+                secretno= Math.trunc(Math.random() *20)+1;
+                document.getElementById('btnagain').style.display='none'
+                document.getElementById('btn').style.display='inline-block'
+                document.getElementById('btn').style.backgroundColor='white'
+                start.innerHTML=`start guessing...`
+                start.style.color='black'
+                num.innerHTML=`The number is ??`
+                document.querySelector('.guesing').style.backgroundColor='white'
+                input.value=` `
+                score= 20;
+            }
+        </script>
+    </body>
+</html>

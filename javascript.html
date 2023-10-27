@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>javascript</title>
+        <script src="ex.js">
+
+        </script>
+    </head>
+    <body>
+
+
+
+
+
+
+        <script>
+            const items={
+                product:{
+                    name:'crazy jeans',
+                    price:'$120',
+                    maker:'nike',
+                },
+                product2:{
+                    name:'wooly jeans',
+                    price:'$250',
+                    maker:'alexae',
+                }
+            }
+            alert(`i need a ${items.product2.name} of ${items.product.price} and by ${items.product.maker}`)
+
+
+            const resturant={
+                name:'food mataz',
+                location:'UI gate',
+                menu:{
+                    swallow:['eba','semo','amala'],
+                    soup:['egusi','okro','ogbono'],
+                    meat:['beef','pork','ckicken'],
+                    drinks:['coke','fanta','malt']
+                },
+            }
+            alert(`i want ${resturant.menu.swallow[2]} and ${resturant.menu.soup[0]} from ${resturant.name} located at ${resturant.location}`)
+
+
+            const jeans=[
+                {
+                    name:'crazy jeans',
+                    price:'$120',
+                    maker:'nike',
+                },
+                {
+                    name:'wooly jeans',
+                    price:'$250',
+                    maker:'alexae',
+                }
+            ]
+            document.write(`i want a ${jeans[0].name} of ${jeans[1].price} and by ${jeans[0].maker}`)
+        </script>
+    </body>
+</html>
