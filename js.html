@@ -8,13 +8,57 @@
         #hotel {
             display: none;
         }
+        .guesing{
+                width: 70%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 17px;
+                font-family: sans-serif;
+                background-color: white;
+                border: 4px solid gold;
+                box-shadow: inset 0px 0px 5px 2px green;
+                padding: 25px;
+                color: black;
+            }
+            .guesing input{
+                width: 85%;
+                padding: 4px;
+                font-weight: bolder;
+                font-size: 22px;
+                border: 2px solid black;
+                border-radius: 5px;
+            }
+            .guesing h1{
+                font-size: 25px;
+                font-weight: bolder;
+            }
+            .guesing h2{
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 60px;
+            }
+            #btnagain{
+                color: white;
+            }
     </style>
 </head>
 
 <body>
     
-<br><br>
+    
 
+
+    <h3 id="list-item-6">MY NUMBER GAME</h3><br>
+                    <div class="guesing">
+                        <h1>GUESS MY NUMBER GAME</h1>
+                        <h2 id="start">start guessing...</h2>
+                        <input id="input" type="text" placeholder="guess a number btw 1 to 50">
+                        <h2 id="num">The number is ??</h2>
+                        <button onclick='game()' id="btn">check</button>
+                        <button onclick='again()' id="btnagain" style="display: none;">click to replay</button>
+                        <h2>Highest Score: <span id="highest"></span></h2>
+                    </div><br>
 
     <select id="acm">
         <option value="option1">public</option>
@@ -46,52 +90,140 @@
     <h1></h1>
 
     <script>
-        const product={
-            id: '1',
-            name: 'Laptop',
-            price: '799.99',
-            category: 'Electronics',
-        };
-        let updated={
-            ...product,
-            category: 'Computers',
-            brand: 'Hp',
-            description: 'large',
-            color: 'black',
-        };
-        let {category,brand,description,color} = updated
-        document.querySelectorAll('h1')[0].innerHTML=`CATEGORY: ${category}`
-        document.querySelectorAll('h1')[1].innerHTML=`BRAND: ${brand}`
-        document.querySelectorAll('h1')[2].innerHTML=`DESCRIPTION: ${description}`
-        document.querySelectorAll('h1')[3].innerHTML=`COLOR: ${color}`
+
+
+let secretno= Math.trunc(Math.random() *50)+1;
+            
+            let num= document.getElementById('num');
+            let score= 50;
+            let btnagain= document.getElementById('btnagain');
+            
+            let highest= 0;
+
+            function scoreline(){
+                score=score-5
+                if(score===0){
+                    start.innerHTML='GAME IS OVER'
+                    start.style.color='black'
+                    num.style.color='black'
+                    num.innerHTML=`The number was ${secretno}`
+                    document.querySelector('.guesing').style.backgroundColor='red'
+                    document.getElementById('btn').style.display='none'
+                    document.getElementById('btnagain').style.display='inline-block'
+                    document.getElementById('btnagain').style.backgroundColor='red'
+                    document.querySelector('body').style.backgroundColor='red'
+                    document.getElementById('btnagain').style.color='white'
+                    input.value=`your score is ${score}`
+                    highest= 0;
+                    if(highest==score){
+                        document.getElementById('highest').innerHTML=`${score}`
+                    }
+                }
+            }
+            function game(){
+                let input= Number(document.getElementById('input').value);
+                let start= document.getElementById('start');
+                if(input<1 || isNaN(input) || !input || input>50){
+                    start.innerHTML='enter a valid number'
+                    start.style.color='red'
+                    
+                    scoreline()
+                }
+                
+                else if(input<secretno){
+                    start.innerHTML='too low'
+                    start.style.color='blue'
+                    scoreline()
+                }
+                else if(input>secretno){
+                    start.innerHTML='too high'
+                    start.style.color='green'
+                    scoreline()
+                }
+                else if(input==secretno){
+                    start.innerHTML=`yes, you are correct, the number is ${secretno}`
+                    start.style.color='white'
+                    document.querySelector('.guesing').style.backgroundColor='green'
+                    document.getElementById('btnagain').style.display='inline-block'
+                    document.getElementById('btnagain').style.backgroundColor='green'
+                    document.querySelector('body').style.backgroundColor='green'
+                    document.getElementById('btnagain').style.color='white'
+                    document.getElementById('btn').style.display='none'
+                    num.innerHTML=`your score is ${score}`
+                    btn.style.backgroundColor='green'
+
+                    if(score>highest){
+                        document.getElementById('highest').innerHTML=`${score}`
+                    }
+                }
+
+            }
+            function again(){
+                secretno= Math.trunc(Math.random() *50)+1;
+                document.getElementById('btnagain').style.display='none'
+                document.getElementById('btn').style.display='inline-block'
+                document.getElementById('btn').style.backgroundColor='white'
+                start.innerHTML=`start guessing...`
+                start.style.color='black'
+                num.innerHTML=`The number is ??`
+                document.querySelector('body').style.backgroundColor='white'
+                document.querySelector('.guesing').style.backgroundColor='white'
+                input.value=` `
+                score= 50;
+            }
 
 
 
 
-        const employeeData = [
-            { id: 1, name: 'Alice', department: 'Engineering' },
-            { id: 2, name: 'Babalola', department: 'Sales' },
-            { id: 3, name: 'Charlie', department: 'Engineering' },
-            { id: 4, name: 'David', department: 'HR' },
-            { id: 5, name: 'Evelyn', department: 'Engineering' },
 
-            { id: 6, name: 'Ojo', department: 'Marketing' },
 
-            { id: 7, name: 'Abdulrasheed', department: 'Engineering' },
 
-            { id: 8, name: 'Korade', department: 'Marketing' },
+        // const product={
+        //     id: '1',
+        //     name: 'Laptop',
+        //     price: '799.99',
+        //     category: 'Electronics',
+        // };
+        // let updated={
+        //     ...product,
+        //     category: 'Computers',
+        //     brand: 'Hp',
+        //     description: 'large',
+        //     color: 'black',
+        // };
+        // let {category,brand,description,color} = updated
+        // document.querySelectorAll('h1')[0].innerHTML=`CATEGORY: ${category}`
+        // document.querySelectorAll('h1')[1].innerHTML=`BRAND: ${brand}`
+        // document.querySelectorAll('h1')[2].innerHTML=`DESCRIPTION: ${description}`
+        // document.querySelectorAll('h1')[3].innerHTML=`COLOR: ${color}`
 
-            { id: 9, name: 'Ngochukwu', department: 'HR' },
 
-            { id: 10, name: 'Tunji', department: 'Instructor' },
 
-            { id: 11, name: 'Ayeni', department: 'Engineering' },
+
+        // const employeeData = [
+        //     { id: 1, name: 'Alice', department: 'Engineering' },
+        //     { id: 2, name: 'Babalola', department: 'Sales' },
+        //     { id: 3, name: 'Charlie', department: 'Engineering' },
+        //     { id: 4, name: 'David', department: 'HR' },
+        //     { id: 5, name: 'Evelyn', department: 'Engineering' },
+
+        //     { id: 6, name: 'Ojo', department: 'Marketing' },
+
+        //     { id: 7, name: 'Abdulrasheed', department: 'Engineering' },
+
+        //     { id: 8, name: 'Korade', department: 'Marketing' },
+
+        //     { id: 9, name: 'Ngochukwu', department: 'HR' },
+
+        //     { id: 10, name: 'Tunji', department: 'Instructor' },
+
+        //     { id: 11, name: 'Ayeni', department: 'Engineering' },
     
-        ];
+        // ];
 
-        let engi= employeeData.filter(({depart}) => department===Engineering);
-        let name= engi.map (({name})=>name);
-        console.log(employeeData.join(','))
+        // let engi= employeeData.filter(({depart}) => department===Engineering);
+        // let name= engi.map (({name})=>name);
+        // console.log(employeeData.join(','))
 
         // let temp =['1','2','0','-2','3','4','5']
         //     let newar=temp.filter(e=>e>2)

@@ -21,7 +21,7 @@
                 top: 5px;
             }
             #list-example{
-                height: 450px;
+                height: 470px;
                 width: 100%;
                 overflow-y: scroll;
                 overflow-x: hidden;
@@ -99,6 +99,14 @@
                 margin-bottom: 10px;
             }
             #first{
+                font-weight: bolder;
+                width: 60%;
+                font-size: 22px;
+                padding: 4px;
+                border: 2px solid black;
+                border-radius: 5px;
+            }
+            #rime{
                 font-weight: bolder;
                 width: 60%;
                 font-size: 22px;
@@ -341,6 +349,25 @@
             #btnagain{
                 color: white;
             }
+            #accordionFlushExample{
+                width: 95%;
+            }
+            #accodiv{
+                background: rgb(1, 1, 99);
+                border: 1px solid gold;
+                box-shadow: inset 0px 0px 11px 3px green;
+                margin-bottom: 7px;
+                border-radius: 15px;
+                color: white;
+            }
+            
+            #accb{
+                background-color: rgba(255, 68, 0, 0.2);
+                border: 1px solid rgb(55, 55, 55);
+                border-radius: 15px;
+                border-bottom: 4px solid gold;
+                color: white;
+            }
             @media screen and (max-width: 768px){
                 .hede{
                     font-size: 15px;
@@ -360,6 +387,9 @@
                     width: 100%;
                 }
                 #first{
+                    width: 100%;
+                }
+                #rime{
                     width: 100%;
                 }
                 #nigbu{
@@ -504,18 +534,14 @@
             <div class="col-4" id="list">
                 <div id="list-example" class="list-group">
                     <a class="list-group-item list-group-item-action" href="#list-item-0">GREETING</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-1">HISTORY OF JAVASCRIPT</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-2">JAVA AND JAVASCRIPT</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-3">LET,CONST AND VAR</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-4">ABOUT MYSELF</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-5">LOGICAL AND COMPARISON OPERATORS</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-6">NIGERIA AGE</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-7">SIMPLE CALCULATOR</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-8">INVESTMENT CALCULATOR</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-9">10 RESERVED KEYWORDS</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-10">LOAN CALCULATOR</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-11">MY NUMBER GAME</a>
-                    
+                    <a class="list-group-item list-group-item-action" href="#list-item-1">ABOUT MYSELF</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-2">NIGERIA AGE</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-3">SIMPLE CALCULATOR</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-4">INVESTMENT CALCULATOR</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-5">LOAN CALCULATOR</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-6">MY NUMBER GAME</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-7">PRIME NUMBER</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-8">THEORY PART</a>
                 </div>
             </div>
             <div class="col-8" id="items">
@@ -527,170 +553,16 @@
                             click to greet you
                         </button>
                     </div><br><br><br>
-                    <h3 id="list-item-1">HISTORY OF JAVASCRIPT</h3><br>
-                    <div>
-                        <ul>
-                            <li>JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997.</li>
-                            <li>JavaScript has some items such as variables, functions, and basic control flow statements.</li>
-                            <li>ECMAScript is the official name of the language.</li>
-                            <li>ECMAScript versions have been abbreviated to ES1, ES2, ES3, ES5, and ES6.</li>
-                            <li>ECMAScript 1, also known as ES1, was the first version of the ECMAScript <br>
-                                standard and was released in 1997. It was based on the JavaScript <br>
-                                language and included feat</li>
-                            <li>1996 Netscape 2 was released with JavaScript 1.</li>
-                            <li>1997 JavaScript became an ECMA standard (ECMA-262)</li>
-                            <li>1997 ES1 ECMAScript 1 was released</li>
-                            <li>1997 ES1 IE 4 was the first browser to support ES1</li>
-                            <li>1998 ES2 ECMAScript 2 was released</li>
-                            <li>1998 Netscape 42 was released with JavaScript 1.3</li>
-                            <li>1999 ES2 IE 5 was the first browser to support ES2</li>
-                            <li>1999 ES3 ECMAScript 3 was released</li>
-                            <li>2000 ES3 IE 5.5 was the first browser to support ES3</li>
-                            <li>2000 Netscape 62 was released with JavaScript 1.5</li>
-                            <li>2000 Firefox 1 was released with JavaScript 1.5</li>
-                            <li>2008 ES4 ECMAScript 4 was abandoned</li>
-                            <li>2009 ES5 ECMAScript 5 was released</li>
-                            <li>2011 ES5 IE 9 was the first browser to support ES5 *</li>
-                            <li>2011 ES5 Firefox 4 was released with JavaScript 1.8.5</li>
-                            <li>2012 ES5 Full support for ES5 in Safari 6</li>
-                            <li>2012 ES5 Full support for ES5 in IE 10</li>
-                            <li>2012 ES5 Full support for ES5 in Chrome 23</li>
-                            <li>2013 ES5 Full support for ES5 in Firefox 21</li>
-                            <li>2013 ES5 Full support for ES5 in Opera 15</li>
-                            <li>2014 ES5 Full support for ES5 in all browsers</li>
-                            <li>2015 ES6 ECMAScript 6 was released</li>
-                            <li>2016 ES6 Full support for ES6 in Chrome 51</li>
-                            <li>2016 ES6 Full support for ES6 in Opera 38</li>
-                            <li>2016 ES6 Full support for ES6 in Safari 10</li>
-                            <li>2017 ES6 Full support for ES6 in Firefox 54</li>
-                            <li>2017 ES6 Full support for ES6 in Edge 15</li>
-                            <li>2018 ES6 Full support for ES6 in all browsers **</li>
-                        </ul>
-                    </div><br><br><br>
 
-
-                    <h3 id="list-item-2">DIFFERENCE BETWEEN JAVA AND JAVASCRIPT.</h3><br>
-                    <div>
-
-
-
-                        <table class="table table-bordered">
-                            <tr>
-                                <td class="hede">s/n</td>
-                                <td class="hede">JAVA SCRIPT</td>
-                                <td class="hede">JAVA </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td> JavaScript is an OOP(object-oriented program).</td>
-                                <td> Java is an object-based programming language.</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>JavaScript is a scripting language.</td>
-                                <td>Java is a Programming language.</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>JavaScript code is run on a browser only.</td>
-                                <td>Java creates applications that run in a virtual machine or browser</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>JavaScript code are all in text.</td>
-                                <td>Java code needs to be compiled</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>JavaScript is more commonly used in web applications like browsers</td>
-                                <td>Java is more widely used in app development, smart devices and back-end applications.</td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>Java does not require that amount of memory.</td>
-                                <td>Javascript requires a large amount of memory.</td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td>JavaScript needs to be integrated into the HTML program for the execution.</td>
-                                <td>Java program should be compiled before execution.</td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td>In JavaScript, user is not able to perform complicated tasks.</td>
-                                <td>In Java, by utilizing the Multi-threading, users can perform complicated tasks.</td>
-                            </tr>
-                            <tr>
-                                <td>9</td>
-                                <td>JavaScript programming language was developed by the "Netscape."</td>
-                                <td>Java programming language was developed by the "Sun Microsystems."</td>
-                            </tr>
-                            <tr>
-                                <td>10</td>
-                                <td>JavaScript is stored on the Host machine (client Machine) as the "source" text.</td>
-                                <td>Java is stored on the host machine as the "Byte" code.</td>
-                            </tr>
-                        </table>
-
-
-
-
-
-
-
-
-                           
-                    </div><br><br><br>
-                    <h3 id="list-item-3">DIFFERENCE BETWEEN LET,CONST AND VAR.</h3><br>
-                    <div>
-                        <ul class="no3">
-                            <li>Const must be initialized during declaration, while var and let can be declared without being initialized.</li>
-                            <li>var declarations are globally scoped or function scoped while let and const are block scoped.</li>
-                            <li>They are all hoisted to the top of their scope, but var variables are initialized with undefined, and let and const variables are not initialized.</li>
-                            <li>var variables can be updated and re-declared within its scope, let variables can be updated but not re-declared <br>
-                                and const variables can neither be updated nor re-declared.
-                        </ul>
-                    </div><br><br><br>
-                    <h3 id="list-item-4">FOR ME.</h3><br>
+                    <h3 id="list-item-1">FOR ME.</h3><br>
                     <div>
                         <button type="button" class="btn btn-primary btn-lg" onclick="james()">
                             check on my details
                         </button>
                     </div>
-                    <br><br><br><br><br>
-                    <h3 id="list-item-5">DIFFERENCE BETWEEN LOGICAL AND COMPARISON OPERATORS.</h3><br>
-                    <div>
-                        <table class="table table-bordered">
-                            <tr>
-                                <td class="hede">s/n</td>
-                                <td class="hede">LOGICAL</td>
-                                <td class="hede">COMPARISON </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td> logical operator's operands are booleans.</td>
-                                <td>  comparison operators may have operands of any type.</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>logical operators perform logical operations on boolean types only.</td>
-                                <td>Comparison operators are used to compare two values</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>negating a comparison involves a logical operation (negation) in addition to the comparison operation.</td>
-                                <td>a single comparison operation that immediately yields the desired result is typically more concise/readable and may be easier for the computer to optimise..</td>
-                            </tr>
-                        </table><br>
-                        <div>
-                            <button type="button" class="btn btn-primary btn-lg" onclick="ope()">
-                                click for one example
-                            </button>
-                        </div>
-                        
-                    </div><br><br><br>
+                    <br><br><br>
                     
-                    <h3 id="list-item-6">NIGERIA AGE</h3><br>
+                    <h3 id="list-item-2">NIGERIA AGE</h3><br>
                     <div class="forniger">
                         <h4>GUESS NIGERIA AGE</h4>
                         <label for="text">Input Nigeria age</label><br>
@@ -701,7 +573,7 @@
                     </div><br><br><br>
                     
 
-                    <h3 id="list-item-7">SIMPLE CALCULATOR</h3><br>
+                    <h3 id="list-item-3">SIMPLE CALCULATOR</h3><br>
                     <div class="calc">
                         <input type="text" id="int1"><br>
                         <h2 id="sign"></h2>
@@ -719,7 +591,7 @@
                         </div>
                     </div><br><br><br>
 
-                    <h3 id="list-item-8">INVESTMENT CALCULATOR</h3><br>
+                    <h3 id="list-item-4">INVESTMENT CALCULATOR</h3><br>
                     <div class="inv">
                         <div class="forr">
                             <div style="width: 60%;">
@@ -752,77 +624,7 @@
                     </div><br><br><br>
 
 
-
-
-                    <h3 id="list-item-9">10 RESERVED KEYWORDS IN JAVASCRIPT AND THERE USAGE</h3><br>
-                    
-                    <div>
-                        <p> JavaScript has several reserved keywords that have special meanings within the language.
-                            Here are 10 commonly used reserved keywords in JavaScript and a brief description of what they do:
-                        </p>
-
-                        <table class="table table-bordered">
-                            <tr>
-                                <td class="hede">s/n</td>
-                                <td class="hede">KEYWORDS</td>
-                                <td class="hede">USAGE </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>LET</td>
-                                <td>It is used to declare block-scoped variables. It allows for better scoping control than 'var'.</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>VAR</td>
-                                <td>Used to declare variables in JavaScript.Variable declared with 'var' are function-scoped</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>CONST</td>
-                                <td>It is also introduced in ES6,'const' is used to declare constants. variables declared with 'const' cannot be reassigned after they are initialized.</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>FUNCTION</td>
-                                <td>It is used to declare a function. Functions are blocks of reusable code that can be invoked with or without parameter</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>IF</td>
-                                <td>It is used to conditionally execute code based on a specified condition. It's part of control flow statements.</td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>ELSE</td>
-                                <td>It is used in conjuction with 'if' to specify code that should execute when the condition in the 'if' statement is false.
-                                    </td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td>FOR</td>
-                                <td>It is used to create loops. The 'for' statement includes initialization, condition, and iteration expressions to control the loop's behaviour.</td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td>WHILE</td>
-                                <td>Another loop statement used to repeatedly exeute a block of code as long as a specified condition is true.</td>
-                            </tr>
-                            <tr>
-                                <td>9</td>
-                                <td>BOOLEAN</td>
-                                <td>It is used as a function to get the value of a variable, object, conditions, expressions, etc. in terms of true or false.</td>
-                            </tr>
-                            <tr>
-                                <td>10</td>
-                                <td>BREAK</td>
-                                <td>It breaks the loop and continues executing the code after the loop.</td>
-                            </tr>
-                        </table>
-
-                    </div><br><br><br>
-
-                    <h3 id="list-item-10">LOAN CALCULATOR</h3><br>
+                    <h3 id="list-item-5">LOAN CALCULATOR</h3><br>
                     <div class="loav">
                         <label for="number">Input the amount you like to borrow</label><br>
                         <input type="number" id="borrow">
@@ -866,7 +668,7 @@
                         <h3 id="reslt"></h3>
                     </div><br><br><br>
 
-                    <h3 id="list-item-11">MY NUMBER GAME</h3><br>
+                    <h3 id="list-item-6">MY NUMBER GAME</h3><br>
                     <div class="guesing">
                         <h1>GUESS MY NUMBER GAME</h1>
                         <h2 id="start">start guessing...</h2>
@@ -875,6 +677,16 @@
                         <button onclick='game()' id="btn">check</button>
                         <button onclick='again()' id="btnagain" style="display: none;">click to replay</button>
                         <h2>Highest Score: <span id="highest"></span></h2>
+                    </div><br><br><br>
+                    
+                    <h3 id="list-item-7">CHECKING OF PRIME NUMBER</h3><br>
+                    <div class="forniger">
+                        <h4>PRIME NUMBER</h4>
+                        <label for="text">Check a prime number from 20 to 150</label><br>
+                        <input type="text" id="rime"><br><br>
+                        <button onclick='prime()' id="nigbu"> 
+                            CHECK
+                        </button>
                     </div><br>
                     <div class="hot">
                         <select id="acm">
@@ -886,7 +698,356 @@
                             <option value="room2">room2</option>
                         </select>
                     </div><br><br><br>
-                    
+
+                    <h3 id="list-item-8">THEORY PART</h3><br>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item" id="accodiv">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" id="accb"style="font-weight: bolder;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                    HISTORY OF JAVASCRIPT
+                                </button>
+                            </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997.</li>
+                                        <li>JavaScript has some items such as variables, functions, and basic control flow statements.</li>
+                                        <li>ECMAScript is the official name of the language.</li>
+                                        <li>ECMAScript versions have been abbreviated to ES1, ES2, ES3, ES5, and ES6.</li>
+                                        <li>ECMAScript 1, also known as ES1, was the first version of the ECMAScript <br>
+                                            standard and was released in 1997. It was based on the JavaScript <br>
+                                            language and included feat</li>
+                                        <li>1996 Netscape 2 was released with JavaScript 1.</li>
+                                        <li>1997 JavaScript became an ECMA standard (ECMA-262)</li>
+                                        <li>1997 ES1 ECMAScript 1 was released</li>
+                                        <li>1997 ES1 IE 4 was the first browser to support ES1</li>
+                                        <li>1998 ES2 ECMAScript 2 was released</li>
+                                        <li>1998 Netscape 42 was released with JavaScript 1.3</li>
+                                        <li>1999 ES2 IE 5 was the first browser to support ES2</li>
+                                        <li>1999 ES3 ECMAScript 3 was released</li>
+                                        <li>2000 ES3 IE 5.5 was the first browser to support ES3</li>
+                                        <li>2000 Netscape 62 was released with JavaScript 1.5</li>
+                                        <li>2000 Firefox 1 was released with JavaScript 1.5</li>
+                                        <li>2008 ES4 ECMAScript 4 was abandoned</li>
+                                        <li>2009 ES5 ECMAScript 5 was released</li>
+                                        <li>2011 ES5 IE 9 was the first browser to support ES5 *</li>
+                                        <li>2011 ES5 Firefox 4 was released with JavaScript 1.8.5</li>
+                                        <li>2012 ES5 Full support for ES5 in Safari 6</li>
+                                        <li>2012 ES5 Full support for ES5 in IE 10</li>
+                                        <li>2012 ES5 Full support for ES5 in Chrome 23</li>
+                                        <li>2013 ES5 Full support for ES5 in Firefox 21</li>
+                                        <li>2013 ES5 Full support for ES5 in Opera 15</li>
+                                        <li>2014 ES5 Full support for ES5 in all browsers</li>
+                                        <li>2015 ES6 ECMAScript 6 was released</li>
+                                        <li>2016 ES6 Full support for ES6 in Chrome 51</li>
+                                        <li>2016 ES6 Full support for ES6 in Opera 38</li>
+                                        <li>2016 ES6 Full support for ES6 in Safari 10</li>
+                                        <li>2017 ES6 Full support for ES6 in Firefox 54</li>
+                                        <li>2017 ES6 Full support for ES6 in Edge 15</li>
+                                        <li>2018 ES6 Full support for ES6 in all browsers **</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="accodiv">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" id="accb" type="button" style="font-weight: bolder;" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    DIFFERENCE BETWEEN JAVA AND JAVASCRIPT
+                                </button>
+                            </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <td class="hede">s/n</td>
+                                            <td class="hede">JAVA SCRIPT</td>
+                                            <td class="hede">JAVA </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td> JavaScript is an OOP(object-oriented program).</td>
+                                            <td> Java is an object-based programming language.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>JavaScript is a scripting language.</td>
+                                            <td>Java is a Programming language.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>JavaScript code is run on a browser only.</td>
+                                            <td>Java creates applications that run in a virtual machine or browser</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>JavaScript code are all in text.</td>
+                                            <td>Java code needs to be compiled</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>JavaScript is more commonly used in web applications like browsers</td>
+                                            <td>Java is more widely used in app development, smart devices and back-end applications.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Java does not require that amount of memory.</td>
+                                            <td>Javascript requires a large amount of memory.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>JavaScript needs to be integrated into the HTML program for the execution.</td>
+                                            <td>Java program should be compiled before execution.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>In JavaScript, user is not able to perform complicated tasks.</td>
+                                            <td>In Java, by utilizing the Multi-threading, users can perform complicated tasks.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>JavaScript programming language was developed by the "Netscape."</td>
+                                            <td>Java programming language was developed by the "Sun Microsystems."</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>JavaScript is stored on the Host machine (client Machine) as the "source" text.</td>
+                                            <td>Java is stored on the host machine as the "Byte" code.</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="accodiv">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" id="accb" type="button" style="font-weight: bolder;" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    DIFFERENCE BETWEEN LET,CONST AND VAR
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ul class="no3">
+                                        <li>Const must be initialized during declaration, while var and let can be declared without being initialized.</li>
+                                        <li>var declarations are globally scoped or function scoped while let and const are block scoped.</li>
+                                        <li>They are all hoisted to the top of their scope, but var variables are initialized with undefined, and let and const variables are not initialized.</li>
+                                        <li>var variables can be updated and re-declared within its scope, let variables can be updated but not re-declared <br>
+                                            and const variables can neither be updated nor re-declared.
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="accodiv">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" id="accb" type="button" style="font-weight: bolder;" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    DIFFERENCE BETWEEN LOGICAL AND COMPARISON OPERATORS
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <td class="hede">s/n</td>
+                                            <td class="hede">LOGICAL</td>
+                                            <td class="hede">COMPARISON </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td> logical operator's operands are booleans.</td>
+                                            <td>  comparison operators may have operands of any type.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>logical operators perform logical operations on boolean types only.</td>
+                                            <td>Comparison operators are used to compare two values</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>negating a comparison involves a logical operation (negation) in addition to the comparison operation.</td>
+                                            <td>a single comparison operation that immediately yields the desired result is typically more concise/readable and may be easier for the computer to optimise..</td>
+                                        </tr>
+                                    </table><br>
+                                    <div>
+                                        <button type="button" class="btn btn-primary btn-lg" onclick="ope()">
+                                            click for one example
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="accodiv">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" id="accb" style="font-weight: bolder;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    10 RESERVED KEYWORDS IN JAVASCRIPT AND THERE USAGE
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p> JavaScript has several reserved keywords that have special meanings within the language.
+                                        Here are 10 commonly used reserved keywords in JavaScript and a brief description of what they do:
+                                    </p>
+            
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <td class="hede">s/n</td>
+                                            <td class="hede">KEYWORDS</td>
+                                            <td class="hede">USAGE </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>LET</td>
+                                            <td>It is used to declare block-scoped variables. It allows for better scoping control than 'var'.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>VAR</td>
+                                            <td>Used to declare variables in JavaScript.Variable declared with 'var' are function-scoped</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>CONST</td>
+                                            <td>It is also introduced in ES6,'const' is used to declare constants. variables declared with 'const' cannot be reassigned after they are initialized.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>FUNCTION</td>
+                                            <td>It is used to declare a function. Functions are blocks of reusable code that can be invoked with or without parameter</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>IF</td>
+                                            <td>It is used to conditionally execute code based on a specified condition. It's part of control flow statements.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>ELSE</td>
+                                            <td>It is used in conjuction with 'if' to specify code that should execute when the condition in the 'if' statement is false.
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>FOR</td>
+                                            <td>It is used to create loops. The 'for' statement includes initialization, condition, and iteration expressions to control the loop's behaviour.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>WHILE</td>
+                                            <td>Another loop statement used to repeatedly exeute a block of code as long as a specified condition is true.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>BOOLEAN</td>
+                                            <td>It is used as a function to get the value of a variable, object, conditions, expressions, etc. in terms of true or false.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>BREAK</td>
+                                            <td>It breaks the loop and continues executing the code after the loop.</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="accodiv">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" id="accb" type="button" style="font-weight: bolder;" data-bs-toggle="collapse" data-bs-target="#flush-collapsefour" aria-expanded="false" aria-controls="flush-collapsefour">
+                                    5 EVENT HANDLER KEYWORDS
+                                </button>
+                            </h2>
+                            <div id="flush-collapsefour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <td class="hede">Event</td>
+                                            <td class="hede">Occurs when...	</td>
+                                            <td class="hede">Event Handler </td>
+                                        </tr>
+                                        <tr>
+                                            <td>click</td>
+                                            <td>User clicks on form element or link.</td>
+                                            <td>onClick</td>
+                                        </tr>
+                                        <tr>
+                                            <td>change</td>
+                                            <td>User changes value of text, textarea, or select element.</td>
+                                            <td>onChange</td>
+                                        </tr>
+                                        <tr>
+                                            <td>focus</td>
+                                            <td>User gives form element input focus.</td>
+                                            <td>onFocus</td>
+                                        </tr>
+                                        <tr>
+                                            <td>load</td>
+                                            <td>User loads the page in the Navigator.</td>
+                                            <td>onLoad</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Submit</td>
+                                            <td>User submit the form in a page.</td>
+                                            <td>onSubmit </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="accodiv">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" id="accb" type="button" style="font-weight: bolder;" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
+                                    FIVE WAYS TO DISPLAY JS CODE
+                                </button>
+                            </h2>
+                            <div id="flush-collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <li>Writing into an HTML element, using innerHTML</li>
+                                    <li>Writing into the HTML output using document.write()</li>
+                                    <li>Writing into the HTML output using document.innerText</li>
+                                    <li>Writing into an alert box, using alert()</li>
+                                    <li>Writing into the browser console, using console.log()</li>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" id="accodiv">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" id="accb" type="button" style="font-weight: bolder;" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
+                                    THE WAYS TO IDENTIFY STRING IN JS
+                                </button>
+                            </h2>
+                            <div id="flush-collapse6" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    Backticks are called template literals and they are much easier and cleaner than using variables in double quotes,
+                                    you can use multi-line strings and string interpolation features with it.
+                                    Single and Double: are same thing. <br>
+            
+                                    let name1= " i'm Rokeeb "<br>
+                                    let name2= ` my name is "Rokeeb" `<br>
+                                    let name3= ' Rokeeb '<br>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" id="accodiv">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" id="accb" type="button" style="font-weight: bolder;" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
+                                    SCOPE, CLOSURE AND HOISTING
+                                </button>
+                            </h2>
+                            <div id="flush-collapse7" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <strong>SCOPE</strong><br>
+                                    Scope refers to the current context of code, which determines the accessibility of variables to JavaScript. The two types of scope are local and global scope. <br><br>
+                                    <strong>CLOSURE</strong><br>
+                                    Closure is a feature of JavaScript that allows inner functions to access the outer scope of a function. <br><br>
+                                    <strong>HOISTING</strong><br>
+                                    Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <br><br><br>
                 </div>
             </div>
         </div><br><br><br><br>
@@ -895,7 +1056,13 @@
 
         
         <script>
-            
+
+            // let retire= (yearofbirth)=>{
+            //     return new Date().getFullYear()-yearofbirth;
+            // }
+            // let name=prompt('what is your name')
+            // let val=prompt('how old are you')
+            // alert(`${name}, you have ${retire(val)} years until retirement`)
 
             let a= new Date().getDay();
             let b= ['sunday, go to church and have a rest','monday, go to work','tuesday, go to work','wednesday, have an exercise and go to work','thursday, clean your environment','friday, go to JUMAH','saturday, let go to party']
@@ -926,7 +1093,7 @@
             function james(){
                 const me={
                     name:'Ali Rokeeb',
-                    age:'17',
+                    age:'18',
                     complextion:'chocolate',
                     town:'ogbomosho',
                     location:'idi-ose',
@@ -1015,16 +1182,16 @@
             }
 
 
-            function calage(birthyear){
-               return new Date().getFullYear()-birthyear;
-            }
-            let val=prompt('which year were you born')
-            if(!val || isNaN(val)){
-                alert('you need to input your age')
-            }
-            else{
-                alert(`You are ${calage(val)} years old`)
-            }
+            // function calage(birthyear){
+            //    return new Date().getFullYear()-birthyear;
+            // }
+            // let val=prompt('which year were you born')
+            // if(!val || isNaN(val)){
+            //     alert('you need to input your age')
+            // }
+            // else{
+            //     alert(`You are ${calage(val)} years old`)
+            // }
                 
 
 
@@ -1188,6 +1355,31 @@
                 document.querySelector('.guesing').style.backgroundColor='white'
                 input.value=` `
                 score= 20;
+            }
+
+
+            function prime(){
+                let prime = document.getElementById('rime').value;
+                let n;
+                
+                if(prime<20 || isNaN(prime) || !prime){
+                    alert('please enter a valid input');
+                }
+                else if(prime>150){
+                    alert(`${prime} is greater than 150`);
+                }
+                
+                else{
+                    for( n=2; n<prime; n++){
+                        if(prime%n==0){
+                            alert(`${prime} is not a prime number`);
+                            break;
+                        }
+                    }
+                    if(n==prime){
+                        alert(`${prime} is a prime number`);
+                    }
+                }
             }
         </script>
     </body>
