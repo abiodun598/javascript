@@ -7,9 +7,9 @@
     <body>
         <!-- <h1 id="kenny">welcome to our store</h1>
         <button onclick="store()">click</button> -->
-<br><br><br><br>
+<br><br>
 
-        <form name="myform" onSubmit="return(valid())">
+        <!-- <form name="myform" onSubmit="return(valid())">
             <label for="text">Name: </label>
             <input type="text" name="name"><br><br>
             <label for="text">age: </label>
@@ -26,78 +26,72 @@
                 <option value="3">ITALY</option>
             </select><br><br>
             <input type="submit">
-        </form>
+        </form> -->
 
-
-
+        <h1 id="yemi"></h1>
+        <div class="hot">
+            <select id="acm">
+                <option value="option1">Public</option>
+                <option value="option2">Hotel</option>
+            </select>
+            <select id="hotel" style="display: none;">
+                <option value="10,000">Classic suite (#10k per night)</option>
+                <option value="20,000">Emerald suite (#20k per night)</option>
+                <option value="30,000">Gold suite (#30k per night)</option>
+            </select><br><br>
+            <input type="text" id="days" placeholder="for how mant days you want to stay in the hotel" style="display: none;"><br>
+            <button  style="display: none;" id="daybut" onclick="mycountdownto()">click</button>
+        </div>
 
 
         
         <script>
-            function valid(){
-                let mynumber=/^[0-9]+$/;
-                let mailformat=/^\w+@[a-z]+\.[a-z]{2,3}$/;
-                let name=document.myform.name.value;
-                let age=document.myform.numb.value;
-                let mail=document.myform.mail.value;
-                let zip=document.myform.code.value;
-                let country=document.myform.country.value;
-                if(name==''){
-                    alert('your name is needed')
-                    document.myform.name.focus();
-                    return false;
-
-                }
-                if(!age.match(mynumber)){
-                    alert('your age must be a digit')
-                    document.myform.numb.focus();
-                    return false;
-                }
-                if(!mail.match(mailformat)){
-                    alert('input a valid E-mail address')
-                    document.myform.mail.focus();
-                    return false;
-                }
-                if(zip.value.length!=5 || zip=='' || isNaN(zip)){
-                    alert('your zip code must be 5 digit')
-                    document.myform.code.focus();
-                    return false;
-                }
-                if(country.value=='-1'){
-                    alert('select your country')
-                    document.myform.country.focus();
-                    return false;
-                }
-                else{
-                    return true;
-                }
-
-            }
 
 
 
-            
-            // let prime = prompt('enter a prime number between 20-150');
-            // let n;
-            
-            // if(prime<20 || isNaN(prime) || !prime){
-            //     alert('please enter a valid input');
-            // }
-            // else if(prime>150){
-            //     alert(`${prime} is greater than 150`);
-            // }
-            
-            // else{
-            //     for( n=2; n<prime; n++){
-            //         if(prime%n==0){
-            //             alert(`${prime} is not a prime number`);
-            //             break;
-            //         }
+            // function valid(){
+            //     let mynumber=/^[0-9]+$/;
+            //     let mailformat=/^\w+@[a-z]+\.[a-z]{2,3}$/;
+            //     let name=document.myform.name.value;
+            //     let age=document.myform.numb.value;
+            //     let mail=document.myform.mail.value;
+            //     let zip=document.myform.code.value;
+            //     let country=document.myform.country.value;
+            //     if(name==''){
+            //         alert('your name is needed')
+            //         document.myform.name.focus();
+            //         return false;
+
             //     }
-            //     if(n==prime){
-            //         alert(`${prime} is a prime number`);
+            //     if(!age.match(mynumber)){
+            //         alert('your age must be a digit')
+            //         document.myform.numb.focus();
+            //         return false;
             //     }
+            //     if(!mail.match(mailformat)){
+            //         alert('input a valid E-mail address')
+            //         document.myform.mail.focus();
+            //         return false;
+            //     }
+            //     if(zip.value.length!=5 || zip=='' || isNaN(zip)){
+            //         alert('your zip code must be 5 digit')
+            //         document.myform.code.focus();
+            //         return false;
+            //     }
+            //     if(country.value=='-1'){
+            //         alert('select your country')
+            //         document.myform.country.focus();
+            //         return false;
+            //     }
+            //     else{
+            //         return true;
+            //     }
+
             // }
+
+
+
+            
 
             // let temp =['1','2','0','-2','3','4','5']
             // let newar=temp.filter(e=>e>2)

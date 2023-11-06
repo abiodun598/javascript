@@ -1,140 +1,481 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <title>Document</title>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
-      rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" 
-      crossorigin="anonymous">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" 
-      crossorigin="anonymous"></script>
-      <style>
-        
-      </style>
+        <title>JS: Other Task</title>
+        <link rel="icon" href="jsdown.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" 
+        crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" 
+        crossorigin="anonymous"></script>
+        <style>
+            @keyframes circ{                
+                0%{
+                    background-image: url(wall1.jpg);
+                }
+                25%{
+                    background-image: url(wall2.jpg);
+                }
+                50%{
+                    background-image: url(wall3.jpg);
+                }
+                100%{
+                    background-image: url(wall4.jpg);
+                }
+            }
+            body{
+                -webkit-animation: circ 70s ease-in-out 0s infinite alternate;
+                -moz-animation: circ 70s ease-in-out 0s infinite alternate;
+                -o-animation: circ 70s ease-in-out 0s infinite alternate;
+                background-attachment: fixed;
+                background-size: contain;
+                background-repeat: repeat;
+                background-position-y: center;
+            } 
+            .ass{
+                font-weight: bolder;
+                letter-spacing: 3px;
+                color: red;
+                padding: 10px;
+                text-align: center;
+                margin: 0px auto;
+                text-shadow: 0px 0px 3px gold;
+                box-shadow: inset 0px 0px 10px 4px gold;
+            }
+            .des{
+                background-color: aqua;
+                width: fit-content;
+                padding: 20px;
+                border-radius: 22px;
+                color: black;
+                margin: 0px 20px;
+            }
+            .des h3{
+                font-size: 20px;
+            }
+            .des div{
+                border: 0.6px solid green;
+                padding: 12px;
+                border-radius: 12px;
+            }
+            .methods{
+                background-color: rgb(219, 214, 214);
+                padding: 20px;
+                padding-bottom: 0px;
+            }
+            .gass{
+                text-align: center;
+                font-weight: 700;
+
+            }
+            .methods>div{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                height: fit-content;
+            }
+            .methods>div>div{
+                width: 48%;
+                background-color: white;
+                box-shadow: 0px 0px 15px 1px black
+            }
+            ol{
+                width: 100%;
+            }
+            #top:hover{
+                background: gold;
+                color: rgb(0, 0, 167);
+            }
+            #top{
+                transition: background 0.8s ease-in-out 0s;
+                color: black;
+                text-decoration: none;
+                text-align: center;
+                font-weight: bolder;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(122, 121, 121);
+                width: 100%;
+            }
+
+            .forniger{
+                background-color: white;
+                width: 40%;
+                padding: 24px 22px;
+                border-radius: 17px;
+                border: 4px solid gold;
+                box-shadow: inset 0px 0px 5px 2px green;
+                color: black;
+                font-weight: bolder;
+                margin-left: 20px;
+            }
+            .forniger h4{
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            #first{
+                font-weight: bolder;
+                width: 60%;
+                font-size: 22px;
+                padding: 4px;
+                border: 2px solid black;
+                border-radius: 5px;
+            }
+           .forniger input{
+                font-weight: bolder;
+                width: 80%;
+                font-size: 22px;
+                padding: 4px;
+                border: 2px solid black;
+                border-radius: 5px;
+            }
+            #nigbu{
+                transition: all 0.5s ease-in-out 0s;
+                font-weight: bolder;
+                width: 80%;
+                border: none;
+                outline: none;
+                padding: 4px;
+                font-size: 22px;
+                border-radius: 5px;
+                background-color: rgb(172, 172, 172);
+            }
+            #nigbu:hover{
+                background: orangered;
+                box-shadow: 0px 0px 12px 2px white;
+            }
+            .forniger h3{
+                font-weight: 700;
+                color: rgb(0, 0, 107) !important;
+                margin-top: 15px;
+            }
+        </style>
   </head>
-  <body class="bg-danger">
-      <div class="row">
-          <div class="col-sm-6">
-              <h1>trtyuiouytdrs</h1>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et commodi 
-                  illo laboriosam magnam ipsa a? Dignissimos suscipit dolor expedita qui hic a
-                  speriores facere omnis ex vel dolorum, eum repellendus eos.</p>
-          </div>
-          <div class="col-sm-6">
-              <h1>trtyuiouytdrs</h1>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et commodi 
-                  illo laboriosam magnam ipsa a? Dignissimos suscipit dolor expedita qui hic a
-                  speriores facere omnis ex vel dolorum, eum repellendus eos.</p>
-          </div>
-      </div>
-      <div class="container alert alert-info alert-dismissible">
-          <button class="btn btn-close " data-bs-dismiss="alert"></button>
-          <p>
-              <strong>important information:</strong> you must registerbyour courses before 
-          </p>
-      </div>
+  <body>
+    <h1 class="ass">OTHER TASK</h1><br>
 
-      <ul class="nav">
-          <li class="nav item">
-              <a href=""
-              class="nav-link">coding</a>
-          </li>
-          <li class="nav item">
-              <a href=""
-              class="nav-link">non-coding</a>
-          </li>
-          <li class="nav item">
-              <a href=""
-              class="nav-link">coding</a>
-          </li>
-          
-      </ul><br><br>
-
-
-      <ul class="nav nav-tab">
-          <li class="nav item">
-              <a href="#home" class="nav-link" 
-              data-bs-toggle="tabs">coding</a>
-          </li>
-          <li class="nav item">
-              <a href="#about" class="nav-link"
-              data-bs-toggle="tabs">non-coding</a>
-          </li>
-          <li class="nav item">
-              <a href=""class="nav-link" 
-              data-bs-toggle="tabs">coding</a>
-          </li>
-          
-      </ul>
-
-      <div class="tab-content">
-          <div class="tab-pane active" id="home">
-              welcome to my page
-          </div>
-          <div class="tab-pane" id="about">
-              you are welcome to my site
-          </div>
-      </div>
-
-
-      <span>
-
-      </span>
-
-      <div class="collapse" id="rokeeb">
-          <div class="card-">
-
-          </div>
-      </div>
-
-
-      <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button bg-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                where are you located
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-              <div class="accordion-body bg-warning">
-                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed bg-info" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                what time can i get it
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <div class="accordion-body bg-warning">
-                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                what is the price
-              </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <div class="accordion-body bg-warning">
-                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-              </div>
-            </div>
-          </div>
+    <div class="des">
+        <div>
+            <h2>USING DESTRUCTURING</h2>
+            <h3></h3>
+            <h3></h3>
+            <h3></h3>
+            <h3></h3>
         </div>
+        <br>
+        <div>
+            <h2>USING SPREAD OPERATOR</h2>
+            <h5 id="olu"></h5>
+            <h5 id="tope"></h5>
+            <h5 id="tolu"></h5>
+            <h5 id="bisi"></h5>
+        </div>
+        <br>
+        <div>
+            <h2>USING REST PARAMETER</h2>
+            <h4 id="clar"></h4>
+        </div>
+        
+    </div>
+    <br><br><br>
+    
+    <div class="methods">
+        <h1 class="gass">METHODS IN JS</h1><br><br>
+        <div>
+            <div>
+                <h2>STRING METHOD</h2>
+                <ol>
+                    <li>string lenght</li>
+                    <ul>
+                        let text= 'fghjkl';<br>
+                        let lenght= text.lenght;
+                    </ul>
+                    <li>string slice()</li>
+                    <ul>
+                        <li>let text= 'fgh,jkl,man';<br>
+                            let part= text.slice(7,13);</li> 
+                        <li>if the parameter is negative, the position will be counted from the end of the string.</li> 
+                    </ul>
+                    <li>string substring()</li>
+                    <ul>
+                        <li>let str= 'ant,apple,man';<br>
+                            let part= str.substring(7,13);</li> 
+                        <li>if it less than 0, it is treated as 0.</li> 
+                    </ul>
+                    <li>string content</li>
+                    <ul>
+                        <li>let text= 'pls go home';<br>
+                            let newtext= text.replace('home','to shop');</li> 
+                    </ul>
+                    <li>string trim()</li>
+                    <ul>
+                        <li>let text= '         hello guys        ';<br>
+                            let text2= text.trim( );</li> 
+                        <li>if it less than 0, it is treated as 0.</li> 
+                    </ul>
+                </ol>
+            </div>
+            <br><br>
+            <div>
+                <h2>NUMBER METHOD</h2>
+                <ol>
+                    <li>toString</li>
+                    <ul>
+                        let x= 123;<br>
+                        x.toString();<br>
+                       (123).toString();<br>
+                       (100+23).toString();<br>
+                    </ul>
+                    <li>toExponential()</li>
+                    <ul>
+                        <li>let x= '9.656';<br>
+                            x.toExponential(2);<br>
+                            x.toExponential(4);<br>
+                            x.toExponential(6);<br>
+                    </ul>
+                    <li>ValueOf()</li>
+                    <ul>
+                        let x= 123;<br>
+                        x.ValueOf();<br>
+                       (123).ValueOf();<br>
+                       (100+23).ValueOf();<br>
+                    </ul>
+                    <li>Number</li>
+                    <ul>
+                        <li>Number(new Date('2023-01-01'))</li>
+                        <li>The Date() method returns the number of milliseconds since 1.1.2023</li>
+                    </ul>
+                    <li>Number isInteger()</li>
+                    <ul>
+                        <li>Number.isInteger(10)<br>
+                            Number.isInteger(10.5);</li> 
+                    </ul>
+                </ol>
+            </div>
+            
+        </div>
+        <br><br>
+    
+        <div>
+            <div>
+                <h2>ARRAY METHOD</h2>
+                <ol>
+                    <li>Array lenght</li>
+                    <ul>
+                       <li> let fru= ['fgh','axe','who'];<br>
+                            let size=fru.lenght;</li>
+                    </ul>
+                    <li>Array toString()</li>
+                    <ul>
+                        <li>let fru= ['apple','axe','mango'];<br>
+                        document.getElementById('input').innerHTML=fru.toString()</li> 
+                    </ul>
+                    <li>Array delete()</li>
+                    <ul>
+                        <li>const fruit= 'orange,banana,coconut';<br>
+                            delete.fru[1];</li>
+                    </ul>
+                    <li>Array splice()</li>
+                    <ul>
+                        <li> let fru= ['jam','butter','who'];<br>
+                         fru.splice(2,0,'lemon','kiwi');</li>
+                    </ul>
+                    <li>string slice()</li>
+                    <ul>
+                        <li> const fru= ['banana','tea','coffee','jam','lemon'];<br>
+                             const citrus=fru.slice;</li>
+                    </ul>
+                </ol>
+            </div>
+            <br><br>
+            <div>
+                <h2>MATH METHOD</h2>
+                <ol>
+                    <li>Math.round()</li>
+                    <ul>
+                       <li> Math.round(x) returns the nearest integer: <br>
+                        Math.round(4.6);</li>
+                    </ul>
+                    <li>Math.ceil()</li>
+                    <ul>
+                        <li>Math.ceil(x) returns the value of x rounded up to its nearest integer: <br>
+                            Math.ceil(4.9);</li> 
+                    </ul>
+                    <li>Math.floor()</li>
+                    <ul>
+                        <li>Math.floor(x) returns the value of x rounded down to its nearest integer: <br>
+                            Math.floor(4.9);</li>
+                    </ul>
+                    <li>Math.trunc()</li>
+                    <ul>
+                        <li>Math.trunc(x) returns the integer part of x: <br>
+                            Math.trunc(4.9);</li>
+                    </ul>
+                    <li>string slice()</li>
+                    <ul>
+                        <li> Math.sign(x) returns if x is negative, null or positive: <br>
+                            Math.sign(-4);<br>
+                            Math.sign(0);<br>
+                            Math.sign(4);</li>
+                    </ul>
+                </ol>
+            </div>
+            
+        </div>
+        <br><br>
+        <div style="justify-content: center; align-items: center;">
+            <div>
+                <h2 style="text-align: center;">0BJECT METHOD</h2>
+                <ol>
+                    <li>const person = {<br>
+                    firstName: "John",<br>
+                    lastName: "Doe",<br>
+                    id: 5566,<br>
+                    fullName: function() {<br>
+                        return this.firstName + " " + this.lastName;<br>
+                    }
+                    };</li>
+                    <li>fullName() method <br>
+                        name = person.fullName();
+                    </li> 
+                    <li>
+                        Adding a new method to an object <br>
+                        person.name = function () {<br>
+                        return this.firstName + " " + this.lastName;<br>
+                        };
+                    </li>
+                    <li>Using Built-In Methods <br>
+                        let message = "Hello world!";<br>
+                        let x = message.toUpperCase();
+                    </li>
+                </ol>
+            </div>
+            
+        </div><br><br>
+        <a href="index.html" id="top">BACK TO HOME PAGE <i class="fa-solid fa-circle-arrow-up" style="color: #000000;"></i></a>
+    </div>
+        <br><br><br><br><br><br>
+
+    <div class="forniger">
+        <h4>CHECKING OF YEARS TO RETIRE</h4>
+        <p>Your retirement age in your country is 60yrs</p>
+        <label for="text" id="fornam">What is your name</label><br>
+        <input type="text" id="name"><br><br>
+        <label for="text" id="forold">How old are you</label><br>
+        <input type="text" id="rime"><br><br>
+        <button onclick='dime()' id="nigbu"> 
+            CHECK
+        </button><br>
+        <h3 id="output"></h3>
+    </div><br><br><br>
 
 
 
 
+    <script>
 
+        function dime(){
+            let retire= (yearofbirth)=>{
+            return 60-Number(yearofbirth);
+            }
+            let name= document.getElementById('name').value;
+            let val= document.getElementById('rime').value;
+            let fornam= document.getElementById('fornam');
+            let forold= document.getElementById('forold');
+            if(!name){
+                fornam.innerHTML= 'Pls, enter your name'
+                fornam.style.color='red'
+                document.getElementById('output').innerHTML=''
+            }
+            else{
+                fornam.innerHTML= 'Input okay'
+                fornam.style.color='blue'
+                if(Number(val)){
+                    document.getElementById('output').innerHTML=`${name}, you have ${retire(val)} years until retirement`
+                }
+            }
+            if(!val || isNaN(val)){
+                forold.innerHTML= 'Enter your age'
+                forold.style.color='red'
+                document.getElementById('output').innerHTML=''
+            }
+            else if(val>60){
+                forold.innerHTML= 'Go and rest, you are more than 60yrs'
+                forold.style.color='red'
+                document.getElementById('output').innerHTML=''
+            }
+            else{
+                forold.innerHTML= 'Valid'
+                forold.style.color='blue'
+                if(isNaN(name)){
+                    document.getElementById('output').innerHTML=`${name}, you have ${retire(val)} years until retirement`
+                }
+            }
+            
+        }
 
         
+
+
+        const product={
+            id: '1',
+            name: 'Laptop',
+            price: '799.99',
+            category: 'Electronics',
+        };
+        let updated={
+            ...product,
+            category: 'Computers',
+            brand: 'Hp',
+            description: 'large',
+            color: 'black',
+        };
+        let {category,brand,description,color} = updated
+        document.querySelectorAll('h3')[0].innerHTML=`CATEGORY: ${category}`
+        document.querySelectorAll('h3')[1].innerHTML=`BRAND: ${brand}`
+        document.querySelectorAll('h3')[2].innerHTML=`DESCRIPTION: ${description}`
+        document.querySelectorAll('h3')[3].innerHTML=`COLOR: ${color}`
+
+
+
+        const employeeData = [
+            { id: 1, name: 'Alice', department: 'Engineering' },
+            { id: 2, name: 'Babalola', department: 'Sales' },
+            { id: 3, name: 'Charlie', department: 'Engineering' },
+            { id: 4, name: 'David', department: 'HR' },
+            { id: 5, name: 'Evelyn', department: 'Engineering' },
+
+            { id: 6, name: 'Ojo', department: 'Marketing' },
+
+            { id: 7, name: 'Abdulrasheed', department: 'Engineering' },
+
+            { id: 8, name: 'Korade', department: 'Marketing' },
+
+            { id: 9, name: 'Ngochukwu', department: 'HR' },
+
+            { id: 10, name: 'Tunji', department: 'Instructor' },
+
+            { id: 11, name: 'Ayeni', department: 'Engineering' }
+        ]
+        
+        let engi= employeeData
+                .filter(({department}) => department==='Engineering')
+               .map (({name})=>name)
+        olu .innerHTML=`${engi[0]}`;
+        tope.innerHTML=`${engi[1]}`;
+        tolu.innerHTML=`${engi[2]}`;
+        bisi.innerHTML=`${engi[3]}`;
+        let bibe=[5,10,15,20]
+        let [don,...rest]=bibe
+        let bonst= don+ Number(...rest) +Number(...rest)+ Number(...rest) +Number(...rest)+don
+        document.getElementById('clar').innerHTML=(`sum of 5,10,15 and 20 = ${bonst}`)
+    </script>
   </body>
 </html>
 

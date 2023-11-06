@@ -252,13 +252,6 @@
             #result{
                 font-size: 21px;
             }
-            .hot select{
-                width: 90px;
-                padding: 4px;
-                font-size: 22px;
-                border: 1px solid black;
-                margin-top: 3px;
-            }
             .loav{
                 background-color: white;
                 width: 60%;
@@ -348,6 +341,120 @@
             }
             #btnagain{
                 color: white;
+            }
+            .hot{
+                width: 70%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 17px;
+                font-family: sans-serif;
+                background-color: white;
+                border: 4px solid gold;
+                box-shadow: inset 0px 0px 5px 2px green;
+                padding: 25px;
+                color: black;
+            }
+            .hot>div:first-child{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                align-items: center;
+                margin-bottom: 5px;
+            }
+            .hot select{
+                font-size: 20px;
+                padding: 5px 2px;
+                font-weight: bold;
+                border: 2px solid black;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .hot select:first-child{
+                width: 32%;
+            }
+            .hot select:last-child{
+                width: 65%;
+            }
+            .hot input{
+                font-size: 22px;
+                padding: 4px;
+                font-weight: bolder;
+                width: 100%;
+                font-size: 22px;
+                border: 2px solid black;
+                border-radius: 5px;
+                margin-top: 3px;
+                margin-bottom: 8px;
+            }
+            .hot button{
+                font-size: 20px;
+                font-weight: bold;
+                width: 35%;
+                font-size: 22px;
+                border: 2px solid black;
+                border-radius: 5px;
+                margin-top: 3px;
+                margin-left: 140px;
+            }
+            #tope{
+                font-weight: 800;
+                color: rgb(0, 0, 107) !important;
+            }
+            #secdiv{
+                width: 100%;
+            }
+            #kifi{
+                float: right;
+                right: 8px;
+                bottom: 8px;
+            }
+            .uber{
+                width: 70%;
+                display: flex;
+                flex-direction: column;
+                border-radius: 17px;
+                font-family: sans-serif;
+                background-color: white;
+                border: 4px solid gold;
+                box-shadow: inset 0px 0px 5px 2px green;
+                padding: 25px 25px;
+                color: black;
+            }
+            .uber input{
+                font-size: 22px;
+                padding: 4px;
+                font-weight: bolder;
+                width: 100%;
+                font-size: 22px;
+                border: 2px solid black;
+                border-radius: 5px;
+                margin-top: 3px;
+                margin-bottom: 8px;
+            }
+            .uber label{
+                font-size: 14px;
+                font-weight: bold;
+            }
+            #spa{
+                font-size: 22px;
+                font-weight: 600;
+            }
+            #fortime span{
+                font-weight: 900;
+                font-size: 50px;
+            }
+            
+            .uber button{
+                font-size: 20px;
+                font-weight: bold;
+                font-size: 22px;
+                border: 2px solid black;
+                border-radius: 3px;
+                padding: 7px;
+                margin: 3px;
             }
             #accordionFlushExample{
                 width: 95%;
@@ -540,8 +647,11 @@
                     <a class="list-group-item list-group-item-action" href="#list-item-4">INVESTMENT CALCULATOR</a>
                     <a class="list-group-item list-group-item-action" href="#list-item-5">LOAN CALCULATOR</a>
                     <a class="list-group-item list-group-item-action" href="#list-item-6">MY NUMBER GAME</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-7">PRIME NUMBER</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-8">THEORY PART</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-7">HOTEL BOOKING</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-8">UBER PRICE SYSTEM AND RECEIPT</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-9">PRIME NUMBER</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-10">THEORY PART</a>
+                    <a class="list-group-item list-group-item-action" href="exercise.html">OTHER TASK</a>
                 </div>
             </div>
             <div class="col-8" id="items">
@@ -679,7 +789,69 @@
                         <h2>Highest Score: <span id="highest"></span></h2>
                     </div><br><br><br>
                     
-                    <h3 id="list-item-7">CHECKING OF PRIME NUMBER</h3><br>
+                    
+                    <h3 id="list-item-7">HOTEL BOOKING</h3><br>
+                    <div class="hot">
+                        <div>
+                            <select id="acm">
+                                <option value="option1">Public</option>
+                                <option value="option2">Hotel</option>
+                            </select>
+                            <select id="hotel" style="display: none;">
+                                <option value="bil">[CHOOSE YOUR CHOICE]</option>
+                                <option value="bill1">Classic suite (#10k per night)</option>
+                                <option value="bill2">Emerald suite (#20k per night)</option>
+                                <option value="bill3">Gold suite (#30k per night)</option>
+                            </select>
+                        </div>
+                        <div style="display: none;" id="secdiv">
+                            <span id="mount" style="display: none; text-align: center; width: 100%;"></span><br>
+                            <input type="text" id="days" placeholder="for how many days you want to stay in the hotel">
+                            <button id="hotbutton" onclick="mycounting()">SUBMIT</button>
+                            <h3 id="tope"></h3>
+                        </div>
+                        
+                    </div><br><br><br>
+
+                    <h3 id="list-item-8">UBER PRICE SYSTEM AND RECEIPT</h3><br>
+                    <div class="uber">
+                        <div id="firsto">
+                            <div id="form"> 
+                                <label for="text">Input where you are leaving from</label><br>
+                                <input type="text" id="leav"><br><br>
+                                <label for="text">Enter your destination</label><br>
+                                <input type="text" id="dest">
+                            </div>
+                            <br>
+                            <span id="spa"></span>
+                            <div style="display: none;" id="fortime">
+                                <span id="min">00</span>
+                                <span>:</span>
+                                <span id="sec">00</span>
+                                <br>
+                            </div>
+                            <div>
+                                <button id="spart">start</button>
+                                <button id="pause">pause</button>
+                                <button id="continue">continue</button>
+                                <button id="stop">stop</button><br>
+                            </div>
+                        </div>
+                        
+                        <button id="receipt" style="display: none;">CLICK FOR YOUR RECEIPT</button>
+
+                        <div id="last" style="display: none;">
+                            <h2>THE RECEIPT</h2>
+                            <p><span id="base"></span></p>     
+                            <p><span id="time"></span></p>
+                            <p><span id="total"></span></p>          
+                            <p><span id="tax"></span></p>               
+                            <p><span id="payable"></span></p>
+                            <button id="kifi" style="display: none;">OK</button>
+                        </div>
+                    </div><br><br><br>
+
+                    <h3 id="list-item-9">CHECKING OF PRIME NUMBER</h3><br>
                     <div class="forniger">
                         <h4>PRIME NUMBER</h4>
                         <label for="text">Check a prime number from 20 to 150</label><br>
@@ -687,19 +859,9 @@
                         <button onclick='prime()' id="nigbu"> 
                             CHECK
                         </button>
-                    </div><br>
-                    <div class="hot">
-                        <select id="acm">
-                            <option value="option1">public</option>
-                            <option value="option2">hotel</option>
-                        </select>
-                        <select id="hotel" style="display: none;">
-                            <option value="room1">room1</option>
-                            <option value="room2">room2</option>
-                        </select>
                     </div><br><br><br>
 
-                    <h3 id="list-item-8">THEORY PART</h3><br>
+                    <h3 id="list-item-10">THEORY PART</h3><br>
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                         <div class="accordion-item" id="accodiv">
                             <h2 class="accordion-header">
@@ -1043,29 +1205,262 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
                     <br><br><br>
+
+
                 </div>
             </div>
         </div><br><br><br><br>
         
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
         
         <script>
+            let firsto= document.getElementById('firsto');
+            let last= document.getElementById('last');
+            let min= document.getElementById('min');
+            let sec= document.getElementById('sec');
+            let spart= document.getElementById('spart');
+            let pause= document.getElementById('pause');
+            let cont= document.getElementById('continue');
+            let sto= document.getElementById('stop');
+            let receipt= document.getElementById('receipt');
+            let base= document.getElementById('base');
+            let time= document.getElementById('time');
+            let total= document.getElementById('total');
+            let tax= document.getElementById('tax');
+            let payable= document.getElementById('payable');
+            let spa= document.getElementById('spa');
+            let kifi= document.getElementById('kifi');
+            pause.style.display='none'
+            cont.style.display='none'
+            sto.style.display='none'
+            last.style.display='none'
+            receipt.style.display='none'
+            
 
-            // let retire= (yearofbirth)=>{
-            //     return new Date().getFullYear()-yearofbirth;
-            // }
-            // let name=prompt('what is your name')
-            // let val=prompt('how old are you')
-            // alert(`${name}, you have ${retire(val)} years until retirement`)
+
+            let rb=0;
+            let mm;
+            function forstart(){
+                ++rb
+                let minut= parseInt(rb/60);
+                let second= rb%60;
+                min.innerHTML=  minut;
+                sec.innerHTML= second;
+                spart.style.display='none' 
+                sto.style.display='inline-block'
+                pause.style.display='inline-block'
+                if(minut<10){
+                    min.innerHTML= '0'+ minut;
+                }
+                if(second<10){
+                    sec.innerHTML= '0'+second;
+                }
+            }
+            function flum(){
+                mm=setInterval(forstart,1000)
+            }
+            function forsta(){
+                flum()
+                let leav= document.getElementById('leav').value;
+                let dest= document.getElementById('dest').value;
+                spart.style.display='none' 
+                document.getElementById('form').style.display='none' 
+                document.querySelector('.uber').style.justifyContent='center'
+                sto.style.display='inline-block'
+                pause.style.display='inline-block'
+                document.getElementById('fortime').style.display='block'
+                spa.style.display='inline-block';
+                spa.innerHTML=`processing your ride from <strong style="color: green;">${leav}</strong> to <strong style="color: green;">${dest}</strong>`
+            }
+
+            function forpause(){
+                clearInterval(mm)
+                spart.style.display='none'
+                pause.style.display='none'
+                cont.style.display='inline-block'
+                sto.style.display='inline-block'
+                spa.innerHTML=`pls wait for some seconds`
+                spa.style.color='blue'
+            }
+            
+            function forcont(){
+                flum()
+                let dest= document.getElementById('dest').value;
+                spart.style.display='none'
+                cont.style.display='none'
+                spa.innerHTML=`journey has resume going to <strong style="color: green;">${dest}</strong>`
+                spa.style.color='black'
+            }
+            function forstop(){
+                rb=0
+                firsto.style.display='none'
+                spart.style.display='none'
+                pause.style.display='none'
+                sto.style.display='none'
+                cont.style.display='none'
+                receipt.style.display='inline-block'
+                min.innerHTML= '00';
+                sec.innerHTML= '00';
+                minut=0;
+                second=0;
+                clearInterval(mm)
+            }
+
+            function recept(){
+                rb=0
+                firsto.style.display='none';
+                spart.style.display='none';
+                pause.style.display='none';
+                sto.style.display='none';
+                cont.style.display='none';
+                last.style.display='inline-block';
+                kifi.style.display='inline-block';
+                receipt.style.display='none';
+                base.innerHTML= 'Base fare - N1000';
+                time.innerHTML=  `${minut} x 20`;
+                total.innerHTML=  Number(minut)*20;
+                tax.innerHTML= 0.1* Number(total);
+                payable.innerHTML= '='+Number(tax)+Number(total)
+            }
+
+            function forok(){
+                rb=0
+                let leav= document.getElementById('leav').value;
+                let dest= document.getElementById('dest').value;
+                document.getElementById('form').style.display='block' 
+                spa.style.display='none';
+                firsto.style.display='block';
+                spart.style.display='inline-block';
+                pause.style.display='none';
+                document.getElementById('form').style.display='block'
+                document.querySelector('.uber').style.justifyContent='flex-start'
+                document.getElementById('fortime').style.display='none'
+                last.style.display='none';
+                kifi.style.display='none';
+                receipt.style.display='none';
+                document.getElementById('leav').value=''
+                document.getElementById('dest').value=''
+            }
+
+            spart.addEventListener('click',forsta)
+            pause.addEventListener('click',forpause)
+            cont.addEventListener('click',forcont)
+            sto.addEventListener('click',forstop)
+            receipt.addEventListener('click',recept)
+            kifi.addEventListener('click',forok)
+
+
+            acm.addEventListener("change", () => {
+                let acm = document.querySelector('#acm');
+                let hotel = document.querySelector('#hotel');
+                if (acm.value === 'option2') {
+                    document.getElementById('secdiv').style.display = "inline-block"
+                    hotel.style.display = "inline-block"
+                }
+                else {
+                    document.getElementById('secdiv').style.display = "none"
+                    hotel.style.display = "none"
+                }
+            })
+            hotel.addEventListener("change", () => {
+                let pla=document.getElementById('days').value;
+                let tobepayed=0;
+                let hotel = document.querySelector('#hotel');
+                let mount = document.getElementById('mount');
+                console.log(mount)
+                if (hotel.value === 'bill1' && Number(pla)) {
+                    tobepayed=pla*10000;
+                    mount.style.display='inline-block';
+                    mount.style.fontWeight='bolder'
+                    mount.style.color='black'
+                    mount.innerHTML=`you will pay N${tobepayed}for Classic suite using ${pla}day(s) `
+                }
+                else if (hotel.value === 'bill2' && Number(pla)) {
+                    tobepayed=pla*20000;
+                    mount.style.display='inline-block';
+                    mount.style.fontWeight='bolder'
+                    mount.style.color='black'
+                    mount.innerHTML=`you will pay N${tobepayed}for Emerald suite using ${pla}day(s) `
+                }
+                else if (hotel.value === 'bill3' && Number(pla)) {
+                    tobepayed=pla*30000;
+                    mount.style.display='inline-block';
+                    mount.style.fontWeight='bolder'
+                    mount.style.color='black'
+                    mount.innerHTML=`you will pay N${tobepayed}for Gold suite using ${pla}day(s) `
+                }
+                else if (hotel.value === 'bil') {
+                    mount.style.display='inline-block';
+                    mount.style.fontWeight='bolder'
+                    mount.style.color='red'
+                    mount.innerHTML=`make sure you choose your interest in the type of room above `
+                }
+                else{
+                    mount.style.display='inline-block';
+                    mount.style.fontWeight='bolder'
+                    mount.style.color='red'
+                    mount.innerHTML=`enter how long you will stay in the hotel`
+                }
+            })
+
+
+
+
+
+            function mycounting(){
+                let hotel = document.querySelector('#hotel');
+                let mount = document.getElementById('mount');
+                let used=parseInt( document.getElementById('days').value);
+                    let now= new Date().getTime();
+                let mycountdown= 86400000*used;
+                let distance = Number(now + mycountdown) ;
+                if(!used || isNaN(used)){
+                    document.getElementById('tope').innerHTML='input how long you will stay in the hotel '
+                    document.getElementById('tope').style.color='red'
+                    clearInterval(yoyo);
+                }
+                yoyo=setInterval(function(){ 
+                    let now=new Date().getTime();
+                    let bis=Number(distance-now)
+                    let days=Math.floor(bis/(1000*60*60*24));
+                    let hours=Math.floor(bis %(1000*60*60*24) /(1000*60*60));
+                    let mins=Math.floor(bis %(1000*60*60)/ (1000*60) );
+                    let sec=Math.floor(bis % (1000*60)/ (1000));
+                
+                    document.getElementById('tope').innerHTML=`Your rent will expire in ${days}day(s) ${hours}hours ${mins}minutes and ${sec}seconds`
+                if (distance <= 0){
+                        clearInterval(yoyo);
+                        document.getElementById('tope').innerHTML='Your rent has expired ,Pls pack out'
+
+                }
+
+                },1000 )
+            }
+
+
+
+
+
+
 
             let a= new Date().getDay();
-            let b= ['sunday, go to church and have a rest','monday, go to work','tuesday, go to work','wednesday, have an exercise and go to work','thursday, clean your environment','friday, go to JUMAH','saturday, let go to party']
+            let b= ['Sunday, go to church and have a rest','Monday, go to work','Tuesday, go to work','W 9090ednesday, have an exercise and go to work','thursday, clean your environment','friday, go to JUMAH','saturday, let go to party']
             alert(`Today is ${b[a]}`)
 
 
@@ -1266,18 +1661,6 @@
             })
 
 
-            acm.addEventListener("change", () => {
-                let acm = document.querySelector('#acm');
-                let hotel = document.querySelector('#hotel');
-                if (acm.value === 'option2') {
-                    hotel.style.display = "inline-block"
-                }
-                else {
-                    hotel.style.display = "none"
-                }
-            }
-
-            )
 
 
             let secretno= Math.trunc(Math.random() *20)+1;

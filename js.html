@@ -50,15 +50,18 @@
 
 
     <h3 id="list-item-6">MY NUMBER GAME</h3><br>
-                    <div class="guesing">
-                        <h1>GUESS MY NUMBER GAME</h1>
-                        <h2 id="start">start guessing...</h2>
-                        <input id="input" type="text" placeholder="guess a number btw 1 to 50">
-                        <h2 id="num">The number is ??</h2>
-                        <button onclick='game()' id="btn">check</button>
-                        <button onclick='again()' id="btnagain" style="display: none;">click to replay</button>
-                        <h2>Highest Score: <span id="highest"></span></h2>
-                    </div><br>
+    <div class="guesing">
+        <h1>GUESS MY NUMBER GAME</h1>
+        <h2 id="start">start guessing...</h2>
+        <input id="input" type="text" placeholder="guess a number btw 1 to 50">
+        <h2 id="num">The number is ??</h2>
+        <button onclick='game()' id="btn">check</button>
+        <button onclick='again()' id="btnagain" style="display: none;">click to replay</button>
+        <h2>Highest Score: <span id="highest"></span></h2>
+    </div><br>
+
+                    
+    <i id="dir" class="fa fa battery-charging"></i><br><br>
 
     <select id="acm">
         <option value="option1">public</option>
@@ -69,9 +72,6 @@
         <option value="room2">room2</option>
         <option value="room3">room3</option>
     </select>
-    <button type="button" class="btn btn-primary btn-lg" onclick="country()">
-        Nigeria age
-    </button>
     <br><br>
     <p>monday</p>
     <p>tuesday</p>
@@ -83,16 +83,16 @@
     
 
 
-
-    <h1></h1>
-    <h1></h1>
-    <h1></h1>
-    <h1></h1>
+    
+    
 
     <script>
+        function greet(who, where){
+            alert(`welcome to ${where}, ${who} `)
+        }
+            setTimeout(greet, 2000, 'david', 'school')
 
-
-let secretno= Math.trunc(Math.random() *50)+1;
+            let secretno= Math.trunc(Math.random() *50)+1;
             
             let num= document.getElementById('num');
             let score= 50;
@@ -173,57 +173,27 @@ let secretno= Math.trunc(Math.random() *50)+1;
             }
 
 
+            function charge(){
+            let bat= document.getElementById('dir');
+            bat.innerHTML='&#xf240';
+            setTimeout(function(){
+                bat.innerHTML= '&#xf241'
+            },1000)
+            setTimeout(function(){
+                bat.innerHTML= '&#xf242'
+            },2000)
+            setTimeout(function(){
+                bat.innerHTML= '&#xf243'
+            },3000)
+            setTimeout(function(){
+                bat.innerHTML= '&#xf244'
+            },4000)
+        }
+        charge()
+        setInterval(charge, 5000)
 
 
-
-
-
-        // const product={
-        //     id: '1',
-        //     name: 'Laptop',
-        //     price: '799.99',
-        //     category: 'Electronics',
-        // };
-        // let updated={
-        //     ...product,
-        //     category: 'Computers',
-        //     brand: 'Hp',
-        //     description: 'large',
-        //     color: 'black',
-        // };
-        // let {category,brand,description,color} = updated
-        // document.querySelectorAll('h1')[0].innerHTML=`CATEGORY: ${category}`
-        // document.querySelectorAll('h1')[1].innerHTML=`BRAND: ${brand}`
-        // document.querySelectorAll('h1')[2].innerHTML=`DESCRIPTION: ${description}`
-        // document.querySelectorAll('h1')[3].innerHTML=`COLOR: ${color}`
-
-
-
-
-        // const employeeData = [
-        //     { id: 1, name: 'Alice', department: 'Engineering' },
-        //     { id: 2, name: 'Babalola', department: 'Sales' },
-        //     { id: 3, name: 'Charlie', department: 'Engineering' },
-        //     { id: 4, name: 'David', department: 'HR' },
-        //     { id: 5, name: 'Evelyn', department: 'Engineering' },
-
-        //     { id: 6, name: 'Ojo', department: 'Marketing' },
-
-        //     { id: 7, name: 'Abdulrasheed', department: 'Engineering' },
-
-        //     { id: 8, name: 'Korade', department: 'Marketing' },
-
-        //     { id: 9, name: 'Ngochukwu', department: 'HR' },
-
-        //     { id: 10, name: 'Tunji', department: 'Instructor' },
-
-        //     { id: 11, name: 'Ayeni', department: 'Engineering' },
-    
-        // ];
-
-        // let engi= employeeData.filter(({depart}) => department===Engineering);
-        // let name= engi.map (({name})=>name);
-        // console.log(employeeData.join(','))
+        
 
         // let temp =['1','2','0','-2','3','4','5']
         //     let newar=temp.filter(e=>e>2)
@@ -282,13 +252,6 @@ let secretno= Math.trunc(Math.random() *50)+1;
 
 
         
-        // let retire= (yearofbirth)=>{
-        //     return new Date().getFullYear()-yearofbirth;
-        // }
-        // let name=prompt('what is your name')
-        // let val=prompt('how old are you')
-        // alert(`${name}, you have ${retire(val)} years until retirement`)
-
         
         // function rok(){
         //     let x=Number(prompt('how old are you'))
@@ -335,20 +298,6 @@ let secretno= Math.trunc(Math.random() *50)+1;
         // alert(par(5,4))
 
 
-
-        //     let naame= prompt('2+6 is ?')
-        // function vid(){
-        //     if(name==5){
-        //         alert('you are close')
-        //     }
-        //     else if(name==8){
-        //         alert('correct')
-        //     }
-        //     else{
-        //         alert('wrong')
-        //     }
-        // }
-        // vid();
 
 
 
