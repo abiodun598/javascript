@@ -29,12 +29,41 @@
             #list-example a{
                 border: 10px groove gold;
                 color: rgb(1, 1, 99);
-                
                 font-size: medium;
                 font-weight: bolder;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
+            }
+            @keyframes circ{                
+                0%{
+                    background-color: aqua;
+                }
+                25%{
+                    background-color: green;
+                }
+                50%{
+                    background-color: white;
+                }
+                50%{
+                    background-color: red;
+                }
+                100%{
+                    background-color: purple;
+                }
+            }
+            #other{
+                -webkit-animation: circ 16s ease-in-out 0s infinite forwards;
+                -moz-animation: circ 16s ease-in-out 0s infinite forwards;
+                -o-animation: circ 16s ease-in-out 0s infinite forwards;
+                margin-top: 10px;
+                border: 4px groove gold;
+                color: rgb(1, 1, 99);
+                font-size: medium;
+                padding: 6px 15px;
+                font-weight: 700;
+                font-size: 28px;
+                border-radius: 7px;
             }
             #items{
                 background-color: rgb(1, 1, 99);
@@ -360,34 +389,34 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                align-items: flex-start;
                 align-items: center;
                 margin-bottom: 5px;
             }
             .hot select{
                 font-size: 20px;
-                padding: 5px 2px;
                 font-weight: bold;
                 border: 2px solid black;
                 border-radius: 5px;
                 cursor: pointer;
             }
             .hot select:first-child{
-                width: 32%;
+                width: 27%;
+                font-size: 22px;
+                padding: 7px 2px;
             }
-            .hot select:last-child{
-                width: 65%;
+            #hotel{
+                width: 100%;
+                padding: 6px 2px;
+                margin: 8px 0px;
             }
             .hot input{
-                font-size: 22px;
+                font-size: 18px;
                 padding: 4px;
                 font-weight: bolder;
-                width: 100%;
+                width: 71%;
                 font-size: 22px;
                 border: 2px solid black;
                 border-radius: 5px;
-                margin-top: 3px;
-                margin-bottom: 8px;
             }
             .hot button{
                 font-size: 20px;
@@ -405,6 +434,7 @@
             }
             #secdiv{
                 width: 100%;
+                padding: 5px 0px;
             }
             #kifi{
                 float: right;
@@ -455,6 +485,16 @@
                 border-radius: 3px;
                 padding: 7px;
                 margin: 3px;
+            }
+            #last h2{
+                font-weight: 700;
+                color: rgb(39, 255, 19);
+                text-shadow: 0px 0px 2px black;
+            }
+            #last span{
+                font-weight: bolder;
+                font-size: 22px;
+                color: black;
             }
             #accordionFlushExample{
                 width: 95%;
@@ -631,6 +671,76 @@
                 #btnagain{
                     color: white;
                 }
+
+                .hot{
+                    width: 100%;
+                    padding: 25px 10px;
+                }
+                .hot>div:first-child{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 5px;
+                }
+                .hot select{
+                    font-size: 20px;
+                    font-weight: bold;
+                    border: 2px solid black;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+                .hot select:first-child{
+                    width: 100%;
+                }
+                #hotel{
+                    width: 100%;
+                }
+                .hot input{
+                    font-size: 18px;
+                    padding: 4px;
+                    font-weight: bolder;
+                    width: 100%;
+                    margin-top: 10px;
+                }
+                .hot button{
+                    width: 100%;
+                    margin-left: 0px;
+                }
+                #tope{
+                    font-weight: 800;
+                    color: rgb(0, 0, 107) !important;
+                }
+                #kifi{
+                    float: right;
+                    right: 8px;
+                    bottom: 8px;
+                }
+                .uber{
+                    width: 100%;
+                    padding: 25px 10px;
+                }
+                .uber input{
+                    font-size: 22px;
+                    padding: 4px;
+                    font-weight: bolder;
+                    width: 100%;
+                    font-size: 22px;
+                    border: 2px solid black;
+                    border-radius: 5px;
+                    margin-top: 3px;
+                    margin-bottom: 8px;
+                }
+                .uber label{
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+                #last span{
+                    font-weight: bolder;
+                    font-size: 20px;
+                    color: black;
+                }
             }
         </style>
     </head>
@@ -651,8 +761,9 @@
                     <a class="list-group-item list-group-item-action" href="#list-item-8">UBER PRICE SYSTEM AND RECEIPT</a>
                     <a class="list-group-item list-group-item-action" href="#list-item-9">PRIME NUMBER</a>
                     <a class="list-group-item list-group-item-action" href="#list-item-10">THEORY PART</a>
-                    <a class="list-group-item list-group-item-action" href="exercise.html">OTHER TASK</a>
+                    
                 </div>
+                <a id="other" class="list-group-item list-group-item-action" href="exercise.html">OTHER TASK</a>
             </div>
             <div class="col-8" id="items">
                 
@@ -792,21 +903,22 @@
                     
                     <h3 id="list-item-7">HOTEL BOOKING</h3><br>
                     <div class="hot">
-                        <div>
+                        <div id="bimpe">
                             <select id="acm">
                                 <option value="option1">Public</option>
                                 <option value="option2">Hotel</option>
                             </select>
-                            <select id="hotel" style="display: none;">
+                            <input type="text" id="days"  style="display: none;" placeholder="for how many days you want to stay in the hotel">
+                        </div>
+                        <div style="display: none;" id="secdiv">
+                            <span id="mount" style="display: none; text-align: center; width: 100%;"></span><br>
+                                
+                            <select id="hotel">
                                 <option value="bil">[CHOOSE YOUR CHOICE]</option>
                                 <option value="bill1">Classic suite (#10k per night)</option>
                                 <option value="bill2">Emerald suite (#20k per night)</option>
                                 <option value="bill3">Gold suite (#30k per night)</option>
                             </select>
-                        </div>
-                        <div style="display: none;" id="secdiv">
-                            <span id="mount" style="display: none; text-align: center; width: 100%;"></span><br>
-                            <input type="text" id="days" placeholder="for how many days you want to stay in the hotel">
                             <button id="hotbutton" onclick="mycounting()">SUBMIT</button>
                             <h3 id="tope"></h3>
                         </div>
@@ -842,11 +954,11 @@
 
                         <div id="last" style="display: none;">
                             <h2>THE RECEIPT</h2>
-                            <p><span id="base"></span></p>     
-                            <p><span id="time"></span></p>
-                            <p><span id="total"></span></p>          
-                            <p><span id="tax"></span></p>               
-                            <p><span id="payable"></span></p>
+                            <span id="base"></span><br>
+                            <span id="timeuse"></span><br>
+                            <span id="total"></span><br>
+                            <span id="tax"></span><br>     
+                            <span id="payable"></span><br>
                             <button id="kifi" style="display: none;">OK</button>
                         </div>
                     </div><br><br><br>
@@ -1240,7 +1352,7 @@
             let sto= document.getElementById('stop');
             let receipt= document.getElementById('receipt');
             let base= document.getElementById('base');
-            let time= document.getElementById('time');
+            let timeuse= document.getElementById('timeuse');
             let total= document.getElementById('total');
             let tax= document.getElementById('tax');
             let payable= document.getElementById('payable');
@@ -1252,24 +1364,25 @@
             last.style.display='none'
             receipt.style.display='none'
             
-
+            let minut;
+            let second;
 
             let rb=0;
             let mm;
             function forstart(){
                 ++rb
-                let minut= parseInt(rb/60);
-                let second= rb%60;
+                minut= parseInt(rb/60);
+                second= rb%60;
                 min.innerHTML=  minut;
                 sec.innerHTML= second;
                 spart.style.display='none' 
                 sto.style.display='inline-block'
                 pause.style.display='inline-block'
                 if(minut<10){
-                    min.innerHTML= '0'+ minut;
+                    min.innerHTML= `${0}`+ `${minut}`;
                 }
                 if(second<10){
-                    sec.innerHTML= '0'+second;
+                    sec.innerHTML= `${0}`+ `${second}`;
                 }
             }
             function flum(){
@@ -1279,14 +1392,21 @@
                 flum()
                 let leav= document.getElementById('leav').value;
                 let dest= document.getElementById('dest').value;
-                spart.style.display='none' 
-                document.getElementById('form').style.display='none' 
-                document.querySelector('.uber').style.justifyContent='center'
-                sto.style.display='inline-block'
-                pause.style.display='inline-block'
-                document.getElementById('fortime').style.display='block'
-                spa.style.display='inline-block';
-                spa.innerHTML=`processing your ride from <strong style="color: green;">${leav}</strong> to <strong style="color: green;">${dest}</strong>`
+                if(!leav || !dest){
+                    clearInterval(mm)
+                    alert('enter where you are to be picked and destination')
+                }
+                else{
+                    spart.style.display='none' 
+                    document.getElementById('form').style.display='none' 
+                    document.querySelector('.uber').style.justifyContent='center'
+                    sto.style.display='inline-block'
+                    pause.style.display='inline-block'
+                    document.getElementById('fortime').style.display='block'
+                    spa.style.display='inline-block';
+                    spa.innerHTML=`processing your ride from <strong style="color: green;">${leav}</strong> to <strong style="color: green;">${dest}</strong>`
+                }
+                
             }
 
             function forpause(){
@@ -1308,22 +1428,16 @@
                 spa.style.color='black'
             }
             function forstop(){
-                rb=0
                 firsto.style.display='none'
                 spart.style.display='none'
                 pause.style.display='none'
                 sto.style.display='none'
                 cont.style.display='none'
                 receipt.style.display='inline-block'
-                min.innerHTML= '00';
-                sec.innerHTML= '00';
-                minut=0;
-                second=0;
                 clearInterval(mm)
             }
 
             function recept(){
-                rb=0
                 firsto.style.display='none';
                 spart.style.display='none';
                 pause.style.display='none';
@@ -1332,14 +1446,30 @@
                 last.style.display='inline-block';
                 kifi.style.display='inline-block';
                 receipt.style.display='none';
-                base.innerHTML= 'Base fare - N1000';
-                time.innerHTML=  `${minut} x 20`;
-                total.innerHTML=  Number(minut)*20;
-                tax.innerHTML= 0.1* Number(total);
-                payable.innerHTML= '='+Number(tax)+Number(total)
+                base.innerHTML= 'Base Fare - ₦800';
+                let bm= minut;
+                let bs= second;
+                if(minut<10){
+                   bm= `${0}`+`${minut}`;
+                }
+                if(second<10){
+                   bs= `${0}`+`${second}`;
+                }
+                timeuse.innerHTML=  `Time Used - ${bm} : ${bs}`;
+
+                let thetotal = (800 * minut) + Math.floor((second / 60) * 20);
+                total.innerHTML =`Total - ₦${thetotal}`;
+                let thetax= Math.round(0.1* thetotal);
+                tax.innerHTML= `Tax (10%) - ₦${thetax}`;
+                payable.innerHTML= `Payable Amount - ₦${thetax + thetotal}`
+                
             }
 
             function forok(){
+                min.innerHTML= '00';
+                sec.innerHTML= '00';
+                minut=0;
+                second=0;
                 rb=0
                 let leav= document.getElementById('leav').value;
                 let dest= document.getElementById('dest').value;
@@ -1371,11 +1501,11 @@
                 let hotel = document.querySelector('#hotel');
                 if (acm.value === 'option2') {
                     document.getElementById('secdiv').style.display = "inline-block"
-                    hotel.style.display = "inline-block"
+                    document.getElementById('days').style.display = "block"
                 }
                 else {
                     document.getElementById('secdiv').style.display = "none"
-                    hotel.style.display = "none"
+                    document.getElementById('days').style.display = "none"
                 }
             })
             hotel.addEventListener("change", () => {
@@ -1389,27 +1519,27 @@
                     mount.style.display='inline-block';
                     mount.style.fontWeight='bolder'
                     mount.style.color='black'
-                    mount.innerHTML=`you will pay N${tobepayed}for Classic suite using ${pla}day(s) `
+                    mount.innerHTML=`you will pay  ₦${tobepayed} for Classic suite using ${pla}day(s) `
                 }
                 else if (hotel.value === 'bill2' && Number(pla)) {
                     tobepayed=pla*20000;
                     mount.style.display='inline-block';
                     mount.style.fontWeight='bolder'
                     mount.style.color='black'
-                    mount.innerHTML=`you will pay N${tobepayed}for Emerald suite using ${pla}day(s) `
+                    mount.innerHTML=`you will pay  ₦${tobepayed} for Emerald suite using ${pla}day(s) `
                 }
                 else if (hotel.value === 'bill3' && Number(pla)) {
                     tobepayed=pla*30000;
                     mount.style.display='inline-block';
                     mount.style.fontWeight='bolder'
                     mount.style.color='black'
-                    mount.innerHTML=`you will pay N${tobepayed}for Gold suite using ${pla}day(s) `
+                    mount.innerHTML=`you will pay  ₦${tobepayed} for Gold suite using ${pla}day(s) `
                 }
                 else if (hotel.value === 'bil') {
                     mount.style.display='inline-block';
                     mount.style.fontWeight='bolder'
                     mount.style.color='red'
-                    mount.innerHTML=`make sure you choose your interest in the type of room above `
+                    mount.innerHTML=`make sure you choose your interest in the type of room below `
                 }
                 else{
                     mount.style.display='inline-block';
@@ -1418,8 +1548,10 @@
                     mount.innerHTML=`enter how long you will stay in the hotel`
                 }
             })
-
-
+            mount.style.display='inline-block';
+            mount.style.fontWeight='bolder'
+            mount.style.color='black'
+            mount.innerHTML=`make sure you choose your interest in the type of room below `
 
 
 
@@ -1430,12 +1562,18 @@
                     let now= new Date().getTime();
                 let mycountdown= 86400000*used;
                 let distance = Number(now + mycountdown) ;
-                if(!used || isNaN(used)){
-                    document.getElementById('tope').innerHTML='input how long you will stay in the hotel '
+                if(!used || isNaN(used) || hotel.value=== 'bil'){
+                    document.getElementById('tope').innerHTML='input how long you will stay in the hotel and choose any type of room'
                     document.getElementById('tope').style.color='red'
                     clearInterval(yoyo);
                 }
-                yoyo=setInterval(function(){ 
+                else{
+                    document.getElementById('days').style.display = 'none'
+                    document.getElementById('hotbutton').style.display = 'none'
+                    document.getElementById('hotel').style.display = 'none'
+                    document.getElementById('acm').style.width = '100%'
+                    
+                    yoyo=setInterval(function(){ 
                     let now=new Date().getTime();
                     let bis=Number(distance-now)
                     let days=Math.floor(bis/(1000*60*60*24));
@@ -1444,13 +1582,12 @@
                     let sec=Math.floor(bis % (1000*60)/ (1000));
                 
                     document.getElementById('tope').innerHTML=`Your rent will expire in ${days}day(s) ${hours}hours ${mins}minutes and ${sec}seconds`
-                if (distance <= 0){
-                        clearInterval(yoyo);
-                        document.getElementById('tope').innerHTML='Your rent has expired ,Pls pack out'
+                    if (distance <= 0){
+                            clearInterval(yoyo);
+                            document.getElementById('tope').innerHTML='Your rent has expired ,Pls pack out'
 
-                }
-
-                },1000 )
+                    }
+                }   ,1000 )  }
             }
 
 

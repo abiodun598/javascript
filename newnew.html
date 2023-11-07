@@ -5,11 +5,11 @@
         <title>Document</title>
     </head>
     <body>
-        <!-- <h1 id="kenny">welcome to our store</h1>
-        <button onclick="store()">click</button> -->
+        <h1 id="kenny">welcome to our store</h1>
+        <button onclick="store()">click</button>
 <br><br>
 
-        <!-- <form name="myform" onSubmit="return(valid())">
+        <form name="myform" onSubmit="return(valid())">
             <label for="text">Name: </label>
             <input type="text" name="name"><br><br>
             <label for="text">age: </label>
@@ -26,26 +26,44 @@
                 <option value="3">ITALY</option>
             </select><br><br>
             <input type="submit">
-        </form> -->
-
-        <h1 id="yemi"></h1>
-        <div class="hot">
-            <select id="acm">
-                <option value="option1">Public</option>
-                <option value="option2">Hotel</option>
-            </select>
-            <select id="hotel" style="display: none;">
-                <option value="10,000">Classic suite (#10k per night)</option>
-                <option value="20,000">Emerald suite (#20k per night)</option>
-                <option value="30,000">Gold suite (#30k per night)</option>
-            </select><br><br>
-            <input type="text" id="days" placeholder="for how mant days you want to stay in the hotel" style="display: none;"><br>
-            <button  style="display: none;" id="daybut" onclick="mycountdownto()">click</button>
-        </div>
-
+        </form>
 
         
+
+
+        <!-- <div id="mif">
+            <h1 id="tit"></h1>
+        </div>
+        <button onclick="finf()">create</button> -->
+        <div id="parent">
+            <li>F.C.T</li>
+            <li>Lagos</li>
+        </div>
+
+        <input id="input" type="text">
+
+        <button onclick="exer()">create</button>
+        
         <script>
+            function exer(){
+                let input= document.getElementById('input').value;
+                let text =document.createTextNode(input);
+                let parent= document.getElementById('parent');
+                let myli= document.createElement('li');
+                parent.appendChild(text);
+                parent.appendChild(myli);
+                // parent.insertBefore(parent, parent.childNodes[0])
+                document.getElementById('input').value=''
+                
+            }
+
+
+            // function finf(){
+            //     let myh1= document.createElement('h1');
+            //     myh1.innerHTML='sdfghjdcvjfggfgdv'
+            //     let mif= document.getElementById('mif');
+            //     mif.appendChild(myh1)
+            // }
 
 
 
