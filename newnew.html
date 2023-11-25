@@ -3,6 +3,43 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+        <style>
+            #parent {
+                border: 2px ridge red;
+                padding: 0px;
+                margin: 20px;
+                width: fit-content;
+            }
+
+            .data {
+                border: 3px solid gold;
+                padding: 10px;
+                margin: 0px;
+                text-align: center
+
+            }
+            .fa-check{
+                color: white;
+                background-color: green;
+                font-size: 25px;
+                margin-right: 6px;
+                padding: 7px;
+            }
+            .fa-pen-to-square{
+                color: white;
+                background-color: blue;
+                font-size: 25px;
+                margin-right: 6px;
+                padding: 7px;
+            }
+            .fa-trash-can{
+                color: white;
+                background-color: red;
+                font-size: 25px;
+                padding: 7px 10px;
+            }
+        </style>
     </head>
     <body>
         <h1 id="kenny">welcome to our store</h1>
@@ -26,36 +63,41 @@
                 <option value="3">ITALY</option>
             </select><br><br>
             <input type="submit">
-        </form>
-
-        
+        </form><br><br><br>
+        <textarea name="" id="" cols="40" rows="10">aesrdtfgyhijkopl;'\</textarea>
+        <fieldset>
+            <legend>parsam</legend>
+            <div>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br> Ratione a, libero beatae ex rerum quibusdam cum veritatis placeat perspiciatis vel molestiae incidunt earum maxime quo <br> itaque molestias repellat excepturi asperiores.
+            </div>
+        </fieldset>
+        <br><br>
 
 
         <!-- <div id="mif">
             <h1 id="tit"></h1>
         </div>
         <button onclick="finf()">create</button> -->
-        <div id="parent">
-            <li>F.C.T</li>
-            <li>Lagos</li>
-        </div>
+        <table id="parent" style="display: none;">
 
-        <input id="input" type="text">
+        </table>
 
-        <button onclick="exer()">create</button>
+        <input id="input" type="text">   <br><br>     
+        <input id="input2" type="time"><br><br>
+
+        <button onclick="exer()">create</button><br><br><br><br><br><br>
+        
+        
+        <br><br><br><br><br><br><br><br>
         
         <script>
-            function exer(){
-                let input= document.getElementById('input').value;
-                let text =document.createTextNode(input);
-                let parent= document.getElementById('parent');
-                let myli= document.createElement('li');
-                parent.appendChild(text);
-                parent.appendChild(myli);
-                // parent.insertBefore(parent, parent.childNodes[0])
-                document.getElementById('input').value=''
+
+
+
                 
-            }
+
+
+
 
 
             // function finf(){

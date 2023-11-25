@@ -1,61 +1,874 @@
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>javascript</title>
-        <script src="ex.js">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Time Management system</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <style>
+        *{
+            padding: 0;
+            /* background-color: red; */
+            margin: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
 
-        </script>
-    </head>
-    <body>
+        /* color */
+        :root{
+            --first-color: #13005A;
+            --second-color: #75b2fd;
+            --third-color: #00a93b;
+        }
+        html{
+            scroll-behavior: smooth;
+            background-color: green;
+        }
+        /* header{
+            background-color: rgba(245, 245, 245, 0.766);
+            width: 100vw;
+            height: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            z-index: 99;
+        } */
+        .header{
+            width: 90%;
+            height: 90%;
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+        }
+        .header_sup{
+            width: 100vw;
+            height: 5rem;
+        }
+        .img_slider{
+            width: 100vw;
+            height: auto;
+            background-color: transparent;
+        }
+        .mySlides{
+            display: none;
+        }
+        .slide_img{
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+        width: 100vw;
+        position: relative;
+        margin: auto;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+        color: #f2f2f2;
+        font-size: 0.5rem;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+        height: 7px;
+        width: 7px;
+        margin: 0 2px;
+        background-color: var(--first-color);
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+        .dot_div{
+            margin-top: -1rem;
+        }
+        .active {
+        background-color: var(--second-color);
+        }
+
+        /* Fading animation */
+        .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+        .text {font-size: 11px}
+        }
+        .area{
+        position: absolute;
+            background-color: transparent;  
+            width: 100%;
+            height:100vh;  
+            z-index: -30;
+        }
+
+        .circles{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .circles li{
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            background: rgba(116, 141, 243, 0.232);
+            animation: animate 25s linear infinite;
+            bottom: -150px;
+            
+        }
+
+        .circles li:nth-child(1){
+            left: 25%;
+            width: 80px;
+            height: 80px;
+            animation-delay: 0s;
+        }
+
+
+        .circles li:nth-child(2){
+            left: 10%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 2s;
+            animation-duration: 12s;
+        }
+
+        .circles li:nth-child(3){
+            left: 70%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 4s;
+        }
+
+        .circles li:nth-child(4){
+            left: 40%;
+            width: 60px;
+            height: 60px;
+            animation-delay: 0s;
+            animation-duration: 18s;
+        }
+
+        .circles li:nth-child(5){
+            left: 65%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 0s;
+        }
+
+        .circles li:nth-child(6){
+            left: 75%;
+            width: 110px;
+            height: 110px;
+            animation-delay: 3s;
+        }
+
+        .circles li:nth-child(7){
+            left: 35%;
+            width: 150px;
+            height: 150px;
+            animation-delay: 7s;
+        }
+
+        .circles li:nth-child(8){
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 15s;
+            animation-duration: 45s;
+        }
+
+        .circles li:nth-child(9){
+            left: 20%;
+            width: 15px;
+            height: 15px;
+            animation-delay: 2s;
+            animation-duration: 35s;
+        }
+
+        .circles li:nth-child(10){
+            left: 85%;
+            width: 150px;
+            height: 150px;
+            animation-delay: 0s;
+            animation-duration: 11s;
+        }
 
 
 
+        @keyframes animate {
 
-
-
-        <script>
-            const items={
-                product:{
-                    name:'crazy jeans',
-                    price:'$120',
-                    maker:'nike',
-                },
-                product2:{
-                    name:'wooly jeans',
-                    price:'$250',
-                    maker:'alexae',
-                }
+            0%{
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+                border-radius: 0;
             }
-            alert(`i need a ${items.product2.name} of ${items.product.price} and by ${items.product.maker}`)
 
-
-            const resturant={
-                name:'food mataz',
-                location:'UI gate',
-                menu:{
-                    swallow:['eba','semo','amala'],
-                    soup:['egusi','okro','ogbono'],
-                    meat:['beef','pork','ckicken'],
-                    drinks:['coke','fanta','malt']
-                },
+            100%{
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+                border-radius: 50%;
             }
-            alert(`i want ${resturant.menu.swallow[2]} and ${resturant.menu.soup[0]} from ${resturant.name} located at ${resturant.location}`)
+
+        }
+        .parent{
+        position: relative;
+            width: 100vw;
+            height: auto;
+        }
+        .btn_div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+        button{
+            width: 250px;
+            height: 45px;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            background-color: var(--second-color);
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover{
+        opacity: 0.5;
+        }
+        .schedule{
+        animation: wiggle 3s linear infinite;
+        }
+        @keyframes wiggle {
+        0%, 7% {
+            transform: rotateZ(0);
+        }
+        15% {
+            transform: rotateZ(-15deg);
+        }
+        20% {
+            transform: rotateZ(10deg);
+        }
+        25% {
+            transform: rotateZ(-10deg);
+        }
+        30% {
+            transform: rotateZ(6deg);
+        }
+        35% {
+            transform: rotateZ(-4deg);
+        }
+        40%, 100% {
+            transform: rotateZ(0);
+        }
+        }
+        .parent_form{
+        width: 100vw;
+        height: 40vh;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        }
+        .parent_form_sub{
+            width: 80%;
+            height: 100%;
+        }
+        .form_input{
+        width: 100%;
+        height: auto;
+        margin: 5px;
+        display: block;
+        }
+        label{
+        font-size: 1rem;
+
+        }
+        .text_input{
+        width: 100%;
+        height: 70px;
+        border: 2px solid #d8d8d8;
+        outline: none;
+        border-radius: 10px;
+        font-size: 0.9rem;
+        padding: 10px;
+        margin-top: 7px;
+        }
+        .text_input:focus{
+        border-bottom: 5px solid var(--second-color);
+        }
+        .form_input_button{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        }
+        .form_input_sub{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        }
+        .form_input1{
+        display: block;
+        width: 50%;
+        height: auto;
+        }
+        .time_input{
+        width: 90%;
+        height: 40px;
+        outline: none;
+        background-color: #d8d8d8a5;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 5px;
+        }
+        .form_input_button1{
+        width: 70%;
+        height: 100%;
+        padding: 5px;
+        }
+        .form_input_button2{
+        width: 30%;
+        height: 100%;
+        }
+        .but2{
+        background-color: red;
+        width: 100%;
+        }
+        .but1{
+        width: 100%;
+        }
+        .parent2{
+        position: relative;
+        width: 100vw;
+        height: auto;
+        }
+        .parent2_div{
+        width: 100%;
+        height: 100%;
+        }
+        .parent2_header{
+        width: 100%;
+        height: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #d8d8d87b;
+        }
+        .parent2_header_text{
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        font-weight: 400;
+        }
+        .new_input{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        .new_input_sub{
+        width: 100%;
+        height: 100%;
+        }
+        .first_input{
+        display: flex;
+        width: 100%;
+        height: 4rem;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid #d8d8d8;
+        }
+        .mytask{
+        height: 100%;
+        width: 45%;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        text-transform: capitalize;
+        border-right: 1px solid #d8d8d8;
+        }
+        .mytaskp{
+        font-size: 0.7rem;
+        padding-left: 10px;
+        font-weight: 400;
+        }
+        .mytaskinfo{
+        width: 25%;
+        height: 100%;
+        border-right: 1px solid #d8d8d8;
+        }
+        .mytaskinfo_sub{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        }
+        .mytaskinfop{
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        }
+        .ends{
+        color: #fff;
+        }
+        .sub{
+        background-color: var(--second-color);
+        }
+        .mytasked{
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+        .countd{
+        font-size: 1rem;
+        font-weight: 700;
+        }
+        .edition{
+        width: 10%;
+        height: 100%;
+        }
+        .edit{
+        width:100%;
+        background-color: var(--first-color);
+        height: 50%;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        }
+        .edit:hover{
+        background-color: #fff;
+        color: var(--first-color);
+        border: 2px solid #d8d8d8;
+        }
+        .delete:hover{
+        background-color: rgb(151, 0, 0);
+        }
+        .delete{
+        width: 100%;
+        height: 50%;
+        background-color: red;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        }
+        i{
+        font-size: 1rem;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1023px){
+        .area{
+        display: none;
+        }
+        .parent{
+            height: 40rem;
+        }
+        }
+        @media screen and (min-width: 1024px){
+        .parent_form_sub{
+            width: 40%;
+        }
+        .new_input_sub{
+            width: 80%;
+            border-left: 1px solid #d8d8d8;
+        }
+        .first_input{
+            height: 5rem;
+        }
+        .mytaskp, .mytaskinfop{
+            font-size: 1rem;
+        }
+        .countd{
+            font-size: 1.7rem;
+        }
+        .parent2_header{
+            height: 4.5rem;
+        }
+        .parent2_header_text{
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            word-spacing: 10px;
+        }
+        i{
+            font-size: 1.3rem;
+        }
+        }
+    </style>
+</head>
+<body>
+    <!-- <header>
+        <div class="header">
+            <img src="img/logo.png" alt="logo" class="header_img" width="150" height="auto">
+        </div>
+    </header> -->
+    <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
+    <div class="header_sup"></div>
+    <div class="img_slider">
+        <div class="slideshow-container">
+
+            <!-- <div class="mySlides fade">
+              <div class="numbertext">1 / 4</div>
+              <img src="desert.jpg" class="slide_img" style="width:100%">
+    
+            </div> -->
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 4</div>
+              <img src="wall1.jpg" class="slide_img" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 4</div>
+              <img src="wall2.jpg" class="slide_img" style="width:100%">
+    
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="wall3.jpg" class="slide_img" style="width:100%">
+            
+            </div>
+            
+        </div>
+            <br>
+            
+        <div style="text-align:center" class="dot_div">
+            <span class="dot"></span> 
+            <span class="dot"></span>
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
+
+    </div>
+
+    <div class="parent">
+        <div class="btn_div" id="mysc">
+            <button class="schedule" id="sch">Add a schedule</button>
+        </div>
+
+        <div class="parent_form" id="form">
+          <div class="parent_form_sub">
+            <div class="form_input">
+              <label for="task_name">Task Details</label>
+              <input type="text" class="text_input" id="TaskInput">
+            </div>
+            <div class="form_input">
+                <div class="form_input_sub">
+                  <div class="form_input1">
+                    <label for="Start_Time">Start Time</label>
+                    <input type="time" class="time_input" id="startTime">
+                  </div>
+                  <div class="form_input1">
+                    <label for="end_task">End Time</label>
+                    <input type="time" class="time_input" id="endTime">
+                  </div>
+                </div>
+            </div>
 
 
-            const jeans=[
-                {
-                    name:'crazy jeans',
-                    price:'$120',
-                    maker:'nike',
-                },
-                {
-                    name:'wooly jeans',
-                    price:'$250',
-                    maker:'alexae',
-                }
-            ]
-            document.write(`i want a ${jeans[0].name} of ${jeans[1].price} and by ${jeans[0].maker}`)
-        </script>
-    </body>
+            <div class="form_input_button">
+              <div class="form_input_button1">
+                <button class="but1" id="addmytask">Add task</button>
+              </div>
+              <div class="form_input_button2">
+                <button class="but2" id="Close_btn">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="parent2">
+        <div class="parent2_div">
+          <div class="parent2_header">
+              <h1 class="parent2_header_text">Today's task</h1>
+          </div>
+          <div class="new_input">
+            <div class="new_input_sub" id="grandparent">
+              <!-- innn -->
+              <!-- <div class="first_input">
+                <div class="mytask">
+                  <p class="mytaskp">go to class and move to market to see a client</p>
+                </div>
+                <div class="mytaskinfo">
+                  <div class="mytaskinfo_sub sub">
+                    <p class="mytaskinfop ends">Starts: <span>09:51</span></p>
+                  </div>
+                  <div class="mytaskinfo_sub">
+                    <p class="mytaskinfop">Ends: <span>09:51</span></p>
+                  </div>
+                </div>
+                <div class="mytasked">
+                  <p class="countd">00:00:00</p>
+                </div>
+                <div class="edition">
+                  <div class="edit">
+                    <i class='bx bx-edit-alt'></i>
+                  </div>
+                  <div class="delete">
+                    <i class='bx bxs-trash'></i>
+                  </div>
+                </div>
+              </div> -->
+
+              
+
+            </div>
+          </div>
+        </div>
+    </div>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 4000);
+        }
+
+        let schedbtn = document.getElementsByClassName("schedule");
+        let myForm = document.getElementById("form");
+        let closeBtn = document.getElementById("Close_btn");
+        let myAddToTaskBtn = document.getElementById("addmytask");
+
+        schedbtn[0].addEventListener("click", function () {
+        myForm.style.display = "flex";
+        schedbtn[0].style.display = "none";
+        });
+        closeBtn.addEventListener("click", () => {
+        myForm.style.display = "none";
+        schedbtn[0].style.display = "block";
+        });
+
+        // adding task
+
+        myAddToTaskBtn.addEventListener("click", engine);
+
+        let taskDetails; // task details
+        let secondParentSubDiv2p; //task ends
+        let thirdParentDivp; //countdown
+        let fouthparentDivSub; //edit icon div
+        let fouthparentDivSub2; // delete icon div
+        let firstparentDiv;
+        let myTaskInput = document.getElementById("TaskInput");
+        let myStartTime = document.getElementById("startTime");
+        let myEndTime = document.getElementById("endTime");
+
+        
+        function engine() {
+        
+        if(!myTaskInput.value){
+            alert('Please enter your task Details');
+        };
+        const selectedTime = myStartTime.value;
+        const currentTime = new Date();
+        const selectedTimeArray = selectedTime.split(":");
+
+        // Convert selected time to a Date object
+        const targetStartTime = new Date();
+        targetStartTime.setHours(parseInt(selectedTimeArray[0], 10));
+        targetStartTime.setMinutes(parseInt(selectedTimeArray[1], 10));
+
+        // second input 
+        let selectedTimeEnd = myEndTime.value;
+        // const currentTime = new Date();
+        let selectedEndTimeArray = selectedTimeEnd.split(":");
+
+        // Convert selected time to a Date object
+        let targetEndTime = new Date();
+        targetEndTime.setHours(parseInt(selectedEndTimeArray[0], 10));
+        targetEndTime.setMinutes(parseInt(selectedEndTimeArray[1], 10));
+
+
+        if (!selectedTime || !selectedTimeEnd) {
+            alert('Please select both start and end times.');
+            return;
+        }
+        // Check if the selected time is in the past
+        if (targetStartTime < currentTime || targetEndTime < currentTime) {
+            alert("Selected time is in the past. Please choose a future time.");
+            return;
+        }
+        if (targetStartTime > targetEndTime) {
+            alert("Please enter an End Time that is higher than Start Time");
+            return;
+        }
+
+        let timeDifference = targetEndTime - targetStartTime;
+
+        let remainingTime = timeDifference;
+        addTask();
+        
+        updateCountdown();
+
+        myStartTime.value = '';
+        myEndTime.value = '';
+
+        
+        };
+        function addTask() {
+        let grandParent = document.getElementById("grandparent");
+        firstparentDiv = document.createElement("div");
+
+        firstparentDiv.className = "first_input";
+        grandParent.appendChild(firstparentDiv);
+
+        let firstSubDIv = document.createElement("div");
+        firstSubDIv.classList = "mytask";
+        firstparentDiv.appendChild(firstSubDIv);
+
+        taskDetails = document.createElement("p");
+        taskDetails.className = "mytaskp";
+        firstSubDIv.appendChild(taskDetails);
+
+        taskDetails.innerHTML = myTaskInput.value;
+        myTaskInput.value = '';
+
+        let secondParentDiv = document.createElement("div");
+        secondParentDiv.className = "mytaskinfo";
+
+        let secondParentSubDiv1 = document.createElement("div");
+        secondParentSubDiv1.className = "mytaskinfo_sub sub";
+
+        const  secondParentSubDivp = document.createElement("p");
+        secondParentSubDivp.className = "mytaskinfop ends";
+
+        secondParentSubDiv1.appendChild(secondParentSubDivp);
+        secondParentDiv.appendChild(secondParentSubDiv1);
+
+        secondParentSubDivp.innerHTML = `STARTS: ${myStartTime.value}` ;
+
+        let secondParentSubDiv2 = document.createElement("div");
+        secondParentSubDiv2.className = "mytaskinfo_sub";
+
+        secondParentSubDiv2p = document.createElement("p");
+        secondParentSubDiv2p.className = "mytaskinfop";
+        secondParentSubDiv2p.innerHTML = `ENDS: ${myEndTime.value}`;
+
+        secondParentSubDiv2.appendChild(secondParentSubDiv2p);
+        secondParentDiv.appendChild(secondParentSubDiv2);
+        firstparentDiv.appendChild(secondParentDiv);
+
+        let thirdParentDiv = document.createElement("div");
+        thirdParentDiv.className = "mytasked";
+
+        thirdParentDivp = document.createElement("p");
+        thirdParentDivp.className = "countd";
+        thirdParentDiv.appendChild(thirdParentDivp);
+        firstparentDiv.appendChild(thirdParentDiv);
+
+        let fouthparentDiv = document.createElement("div");
+        fouthparentDiv.className = "edition";
+
+        fouthparentDivSub = document.createElement("div");
+        fouthparentDivSub.className = "edit";
+
+        
+
+
+
+        let fouthparentDivSubi = document.createElement("i");
+        fouthparentDivSubi.className = "bx bx-edit-alt";
+        fouthparentDivSub.appendChild(fouthparentDivSubi);
+        fouthparentDiv.appendChild(fouthparentDivSub);
+
+        fouthparentDivSub2 = document.createElement("div");
+        fouthparentDivSub2.className = "delete";
+
+        let fouthparentDivSub2i = document.createElement("i");
+        fouthparentDivSub2i.className = "bx bxs-trash";
+        fouthparentDivSub2.appendChild(fouthparentDivSub2i);
+        fouthparentDiv.appendChild(fouthparentDivSub2);
+        firstparentDiv.appendChild(fouthparentDiv);
+
+        let mG = document.getElementsByClassName('delete');
+        let rd;
+        for(rd = 0; rd<mG.length; rd++){
+            mG[rd].addEventListener('click', function(){
+            firstparentDiv.style.display = 'none';
+            });
+        };
+        };
+        function updateCountdown() {
+        let hours = Math.floor(remainingTime / 3600000);
+        let minutes = Math.floor((remainingTime % 3600000) / 60000);
+        let seconds = Math.floor((remainingTime % 60000) / 1000);
+
+        if(hours <= 9){
+            hours = `${0}` + `${hours}`;
+        }
+        if(minutes <= 9){
+            minutes = `${0}` + `${minutes}`;
+        }
+        if(seconds <= 9){
+            seconds = `${0}` + `${seconds}`;
+        }
+
+        // if(currentTime >= startTime){
+        thirdParentDivp.textContent = `${hours}:${minutes}:${seconds}`;
+        // }
+        if (remainingTime <= 0) {
+            clearInterval(countdownInterval);
+            thirdParentDivp.textContent = "Completed!";
+        } else {
+            remainingTime -= 1000; // Decrease by 1 second
+        }
+        };
+        let countdownInterval = setInterval(updateCountdown, 1000);
+    </script>
+</body>
 </html>

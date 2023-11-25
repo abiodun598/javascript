@@ -57,6 +57,9 @@
             .des h3{
                 font-size: 20px;
             }
+            .des h2{
+                font-weight: 600;
+            }
             .des div{
                 border: 0.6px solid green;
                 padding: 12px;
@@ -127,7 +130,7 @@
                 border: 2px solid black;
                 border-radius: 5px;
             }
-           .forniger input{
+            .forniger input{
                 font-weight: bolder;
                 width: 80%;
                 font-size: 22px;
@@ -154,6 +157,61 @@
                 font-weight: 700;
                 color: rgb(0, 0, 107) !important;
                 margin-top: 15px;
+            }
+            .rigy{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                background-color: white;
+                margin-bottom: 50px;
+                padding: 30px 0px;
+            }
+            .maput{
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .maput>div{
+                width: 63%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .maput input{
+                font-weight: bolder;
+                width: 47%;
+                font-size: 22px;
+                padding: 4px;
+                border: 2px solid black;
+                border-radius: 5px;
+            }
+            .maput button{
+                color: white;
+                background-color: black;
+                font-weight: bolder;
+                font-size: 17px;
+                font-weight: 800;
+                margin-top: 20px;
+                padding: 6px 20px;
+                border: none;
+                outline: none;
+            }
+            .maput button:hover{
+                background-color: rgb(192, 255, 234);
+                color: black;
+            }
+            table{
+                background-color: white;
+            }
+            td{
+                border: 1px solid black;
+            }
+            thead{
+                font-weight: 700;
+                color: black;
             }
             .caveat{
                 color: black;
@@ -186,6 +244,9 @@
                 .methods>div>div{
                     width: 100%;
                 }
+                .hj{
+                    display: block !important;
+                }
                 .forniger{
                     background-color: white;
                     width: 90%;
@@ -210,9 +271,9 @@
                     border: 2px solid black;
                     border-radius: 5px;
                 }
-            .forniger input{
+                .forniger input{
                     font-weight: bolder;
-                    width: 80%;
+                    width: 90%;
                     font-size: 22px;
                     padding: 4px;
                     border: 2px solid black;
@@ -221,7 +282,7 @@
                 #nigbu{
                     transition: all 0.5s ease-in-out 0s;
                     font-weight: bolder;
-                    width: 80%;
+                    width: 90%;
                     border: none;
                     outline: none;
                     padding: 4px;
@@ -237,7 +298,25 @@
                     font-weight: 700;
                     color: rgb(0, 0, 107) !important;
                     margin-top: 15px;
-                }   
+                }
+                .maput{
+                    width: 90%;
+                }
+                .maput>div{
+                    width: 100%;
+                }
+                table{
+                    background-color: white;
+                    font-size: 13px;
+                }
+                td{
+                    border: 1px solid black;
+                    padding: 2px 6px !important;
+                }
+                thead{
+                    font-weight: 700;
+                    color: black;
+                }
                 .caveat{
                     padding: 3px;
                     border-radius: 12px;
@@ -367,7 +446,7 @@
                     <li>Array toString()</li>
                     <ul>
                         <li>let fru= ['apple','axe','mango'];<br>
-                        document.getElementById ('input').innerHTML=fru.toString()</li> 
+                        document.getElementById ('input') <br class="hj" style="display: none;">.innerHTML=fru.toString()</li> 
                     </ul>
                     <li>Array delete()</li>
                     <ul>
@@ -381,7 +460,7 @@
                     </ul>
                     <li>string slice()</li>
                     <ul>
-                        <li> const fru= ['banana','tea','coffee','jam','lemon'];<br>
+                        <li> const fru= ['banana','tea','coffee', <br class="hj" style="display: none;"> 'jam','lemon'];<br>
                              const citrus=fru.slice;</li>
                     </ul>
                 </ol>
@@ -451,7 +530,7 @@
             </div>
             
         </div><br><br>
-        <a href="index.html" id="top">BACK TO HOME PAGE <i class="fa-solid fa-circle-arrow-up" style="color: #000000;"></i></a>
+        <a href="index.html" id="top">BACK TO HOME PAGE <i class="fa-solid fa-circle-arrow-up" style="color: #000000; margin-left: 5px;"></i></a>
     </div>
         <br><br><br><br><br><br>
 
@@ -467,7 +546,33 @@
         </button><br>
         <h3 id="output"></h3>
     </div><br><br>
-    
+
+
+
+    <div class="rigy">
+        <h2>To Do List</h2><br>
+        <div class="maput">
+            <div>
+                <input type="text" id="we" placeholder="Task here" />
+                <input type="text" id="keb" placeholder="For how many minutes" />
+            </div>
+            <button id="kir" >ADD</button><br />
+
+            <table id="tel" border="3" cellpadding="10" width="100%" style="text-align: center;">
+                <thead>
+                    <tr>
+                        <td>Task</td>
+                        <td>Time started</td>
+                        <td>Until</td>
+                        <td>Delete</td>
+                        <td>Mark</td>
+                        <td>Edit</td>
+                    </tr>
+                </thead>
+                <tbody id="yu"></tbody>
+            </table>
+        </div>
+    </div>
 
     <div class="caveat">
         <h3>caveat: this page just a student project, not attempt to clone
@@ -576,6 +681,160 @@
         let [don,...rest]=bibe
         let bonst= don+ Number(...rest) +Number(...rest)+ Number(...rest) +Number(...rest)+don
         document.getElementById('clar').innerHTML=(`sum of 5,10,15 and 20 = ${bonst}`)
+
+
+
+
+
+
+
+
+
+
+        
+        function baboo() {
+            let m;
+            let a = document.getElementById(`we`).value;
+            let b = document.getElementById(`yu`);
+            let c = document.createElement(`td`);
+            let d = document.createElement(`tr`);
+            let e = document.createTextNode(a);
+            let h = document.getElementById(`keb`).value;
+            c.appendChild(e);
+            d.appendChild(c);
+            b.appendChild(d);
+            let dat = new Date();
+            let hou = dat.getHours();
+            let mi = dat.getMinutes();
+            hou = hou < 10 ? "0" + hou : hou;
+            mi = mi < 10 ? "0" + mi : mi;
+            if (hou > 12) {
+                hou = hou - 12;
+            }
+            if (hou > 9) {
+                hou = hou = `${hou}`;
+            } else {
+                hou = `${0}` + `${hou}`;
+            }
+
+            tim = ` ${hou} : ${mi}`;
+
+            let tex = document.createTextNode(tim);
+            let cre = document.createElement(`td`);
+            cre.appendChild(tex);
+            d.appendChild(cre);
+
+            const countdown = document.createElement("td");
+            countdown.textContent = "00:00:00";
+            startCountdown(countdown);
+            d.appendChild(countdown);
+
+            function startCountdown(countdownElement) {
+                const targetTime =  
+                    new Date().getTime() + document.getElementById('keb').value * 60 * 1000;
+
+                function updateCountdown() {
+                    const currentTime = new Date().getTime();
+                    const timeDifference = targetTime - currentTime;
+
+                    if (timeDifference <= 0) {
+                        countdownElement.textContent = "Expired";
+                        countdownElement.style.color = "#dc3545";
+                        d.style.disable = `disable`;
+
+                    } else {
+                        const hours = Math.floor(timeDifference / (1000 * 60 * 60));
+                        const minutes = Math.floor(
+                            (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
+                        );
+                        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+                        countdownElement.textContent = `${formatTime(hours)}:${formatTime(
+                            minutes
+                        )}:${formatTime(seconds)}`;
+                    }
+                }
+
+                function formatTime(time) {
+                    return time < 10 ? `0${time}` : time;
+                }
+
+                updateCountdown();
+                m= setInterval(updateCountdown, 1000);
+            }
+
+            let jomtd = document.createElement(`td`);
+            let nod = document.createTextNode(`\u00d7`);
+            jomtd.appendChild(nod);
+            d.appendChild(jomtd);
+            jomtd.title = 'Delete'
+            jomtd.style.backgroundColor = 'red'
+            jomtd.style.color = 'white';
+            jomtd.style.cursor = `pointer`;
+            jomtd.className = 'close';
+
+            let ment = document.getElementsByClassName(`close`);
+            let g;
+            for (g = 0; g < ment.length; g++) {
+                ment[g].onclick = function () {
+                    this.parentNode.style.display = `none`;
+                };
+            }
+
+            let paw = document.createElement(`td`);
+            let san = document.createTextNode(`\u2714`);
+            paw.appendChild(san);
+            d.appendChild(paw);
+            paw.style.cursor = `pointer`;
+            paw.title = 'Mark done';
+            paw.style.backgroundColor = 'green'
+            paw.style.color = 'white'
+            paw.className = 'done'
+
+            let donc = document.getElementsByClassName(`done`);
+
+            for (r = 0; r < donc.length; r++) {
+                donc[r].onclick = function () {
+                    this.parentNode.style.textDecoration = `line-through`;
+                    clearInterval(m);
+                    
+                };
+            }
+
+            let child = document.createElement(`td`);
+            let exn = document.createTextNode(`Edit`);
+            child.appendChild(exn);
+            d.appendChild(child);
+            child.className = `edit`;
+            child.title = 'Edit';
+            child.style.cursor = `pointer`;
+            child.style.backgroundColor = 'blue'
+            child.style.color = 'white'
+
+            let son = document.getElementsByClassName(`edit`);
+            let f;
+            for (f = 0; f < son.length; f++) {
+                son[f].onclick = function () {
+                    document.getElementById(`we`).value = a;
+                    this.parentNode.style.display = `none`;
+                    document.getElementById(`keb`).value = h;
+                };
+            }
+            
+            document.getElementById(`we`).value=''
+            document.getElementById(`keb`).value=''
+            
+            if(!a || !h || isNaN(h)){
+                alert('Enter the right input')
+                d.style.display='none'
+            }
+            else{
+                d.style.display='display'
+            }
+        }
+        
+        let get = document.getElementById(`kir`);
+        get.addEventListener(`click`, baboo);
     </script>
   </body>
 </html>
