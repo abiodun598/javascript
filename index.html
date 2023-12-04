@@ -905,9 +905,11 @@
                     <div class="hot">
                         <div id="bimpe">
                             <select id="acm">
+                                <option value="view">[CHOOSE]</option>
                                 <option value="option1">Public</option>
                                 <option value="option2">Hotel</option>
                             </select>
+                            <h2 id="stamin"></h2>
                             <input type="text" id="days"  style="display: none;" placeholder="for how many days you want to stay in the hotel">
                         </div>
                         <div style="display: none;" id="secdiv">
@@ -956,6 +958,7 @@
                             <h2>THE RECEIPT</h2>
                             <span id="base"></span><br>
                             <span id="timeuse"></span><br>
+                            <span id="tf"></span><br>
                             <span id="total"></span><br>
                             <span id="tax"></span><br>     
                             <span id="payable"></span><br>
@@ -1457,12 +1460,17 @@
                    bs= `${0}`+`${second}`;
                 }
                 timeuse.innerHTML=  `Time Used - ${bm} : ${bs}`;
-
-                let thetotal = (800 * minut) + Math.floor((second / 60) * 20);
+                let thetf= bm;
+                tf.innerHTML= `Time Fare - ${thetf} x ₦20`;
+                let thetotal = Math.round(20 * minut);
+                console.log(thetotal)
                 total.innerHTML =`Total - ₦${thetotal}`;
                 let thetax= Math.round(0.1* thetotal);
                 tax.innerHTML= `Tax (10%) - ₦${thetax}`;
                 payable.innerHTML= `Payable Amount - ₦${thetax + thetotal}`
+                if(bm==0){
+                    payable.innerHTML= `Payable Amount - ₦800`
+                }
                 
             }
 
@@ -1497,16 +1505,54 @@
             kifi.addEventListener('click',forok)
 
 
+            // acm.addEventListener("change", () => {
+            //     let acm = document.querySelector('#acm');
+            //     let hotel = document.querySelector('#hotel');
+            //     if (acm.value === 'option2') {
+            //         document.getElementById('secdiv').style.display = "inline-block";
+            //         document.getElementById('days').style.display = "block";
+            //         // document.getElementById('stamin').style.display="none";
+            //         document.querySelectorAll('h5').style.display="none";
+            //     }
+            //     else {
+            //         document.getElementById('secdiv').style.display = "none";
+            //         document.getElementById('days').style.display = "none";
+            //     }
+            //     if (acm.value === 'option1') {
+            //         document.getElementById('secdiv').style.display = "none";
+            //         document.getElementById('days').style.display = "none";
+            //         let child = document.createElement(`h5`);
+            //         let exn = 'You can stay in our compound';
+            //         child.appendChild(exn);
+            //         document.getElementById('bimpe').appendChild(child);
+            //         child.id = `stamin`;
+            //         document.querySelectorAll('h5').style.fontWeight="700";
+            //     }
+            //     else {
+            //         document.querySelectorAll('h5').style.display="none";
+            //     }
+            // })
             acm.addEventListener("change", () => {
                 let acm = document.querySelector('#acm');
                 let hotel = document.querySelector('#hotel');
                 if (acm.value === 'option2') {
-                    document.getElementById('secdiv').style.display = "inline-block"
-                    document.getElementById('days').style.display = "block"
+                    document.getElementById('secdiv').style.display = "inline-block";
+                    document.getElementById('days').style.display = "block";
+                    document.getElementById('stamin').style.display="none";
                 }
                 else {
-                    document.getElementById('secdiv').style.display = "none"
-                    document.getElementById('days').style.display = "none"
+                    document.getElementById('secdiv').style.display = "none";
+                    document.getElementById('days').style.display = "none";
+                }
+                if (acm.value === 'option1') {
+                    document.getElementById('secdiv').style.display = "none";
+                    document.getElementById('days').style.display = "none";
+                    document.getElementById('stamin').style.display = "inline-block";
+                    document.getElementById('stamin').innerHTML='You can stay in the bar beside our building'
+                    document.getElementById('stamin').style.fontWeight="700";
+                }
+                else {
+                    document.getElementById('stamin').style.display="none";
                 }
             })
             hotel.addEventListener("change", () => {
@@ -1514,7 +1560,6 @@
                 let tobepayed=0;
                 let hotel = document.querySelector('#hotel');
                 let mount = document.getElementById('mount');
-                console.log(mount)
                 if (hotel.value === 'bill1' && Number(pla)) {
                     tobepayed=pla*10000;
                     mount.style.display='inline-block';
@@ -1581,12 +1626,11 @@
                     let hours=Math.floor(bis %(1000*60*60*24) /(1000*60*60));
                     let mins=Math.floor(bis %(1000*60*60)/ (1000*60) );
                     let sec=Math.floor(bis % (1000*60)/ (1000));
-                
+                    document.getElementById('days').style.display = 'none'
                     document.getElementById('tope').innerHTML=`Your rent will expire in ${days}day(s) ${hours}hours ${mins}minutes and ${sec}seconds`
                     if (distance <= 0){
                             clearInterval(yoyo);
                             document.getElementById('tope').innerHTML='Your rent has expired ,Pls pack out'
-
                     }
                 }   ,1000 )  }
             }
